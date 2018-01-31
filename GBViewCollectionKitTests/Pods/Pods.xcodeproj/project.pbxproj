@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0384B20A235C99C5BBF823BAAC8A46D1 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0ABB0341F72B164A22B3DEF4E967C /* LoadingViewController.swift */; };
-		043472462643F6E0B4C23EDF4B81B104 /* GPBaseCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5382676C8B4BCE2CAA38BA9A4C9929FD /* GPBaseCollectionViewCell.xib */; };
 		0D25578AEE603AF547F5BD06E7DF76DE /* GBViewCollectionKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A940C5889E92AEB1A241BE8693AF63 /* GBViewCollectionKit-dummy.m */; };
 		273C9372C8FCAA9D2DB630BF7521E40D /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0513FBBCF27AF1510A93171AEA65DDC8 /* BaseCollectionViewController.swift */; };
 		4D42AA1E3C130DE5846625033313501F /* GBBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBBaseCellModel.swift */; };
@@ -16,7 +15,6 @@
 		5AE4D1CF75C66028829018B79370FAAB /* Pods-GBViewCollectionKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6219069B7E6EC3EC804ED54F3FACC1D3 /* Pods-GBViewCollectionKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65453C8AC98D634FE907B2F8C1C5D2D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		896DFEA2BCEE1356A72E4CAB5701987A /* GBViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A7465155F2A456E9D66DDAD723C984 /* GBViewCollectionDataSource.swift */; };
-		91C082CF195752EA54F7663BD1B539F0 /* CustomStatusBarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2BCA003D88053CFBD675C16615F09 /* CustomStatusBarNavigationController.swift */; };
 		9F249DC38CD0AB44CE25B15A6FB876B3 /* GBViewCollectionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3630BB4CAAE32A631CDED80997655CAD /* GBViewCollectionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA4809BD7B9A6477B9D8CE827CAFD329 /* GBViewCollectionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE77BCB730BC724492001E6F7B86B7 /* GBViewCollectionSectionModel.swift */; };
 		F14C2ECDA06416E55FA8E98FB8E4D3E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -42,7 +40,6 @@
 		3630BB4CAAE32A631CDED80997655CAD /* GBViewCollectionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBViewCollectionKit-umbrella.h"; sourceTree = "<group>"; };
 		3923799DDED502E3ECC2117BE2D075F8 /* Pods-GBViewCollectionKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBViewCollectionKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		46C37A54301E122F8EE4F4AFE021D443 /* GBViewCollectionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBViewCollectionKit-prefix.pch"; sourceTree = "<group>"; };
-		5382676C8B4BCE2CAA38BA9A4C9929FD /* GPBaseCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = GPBaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		5A6E5429FC83676519E238BB0DE5F83B /* Pods_GBViewCollectionKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBViewCollectionKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6219069B7E6EC3EC804ED54F3FACC1D3 /* Pods-GBViewCollectionKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBViewCollectionKitTests-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -57,7 +54,6 @@
 		C3F0ABB0341F72B164A22B3DEF4E967C /* LoadingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBBaseCellModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCellModel.swift; sourceTree = "<group>"; };
 		D871BD7B481FC94DF87CE7C3189BEBE5 /* Pods-GBViewCollectionKitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitTests-resources.sh"; sourceTree = "<group>"; };
-		ECD2BCA003D88053CFBD675C16615F09 /* CustomStatusBarNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomStatusBarNavigationController.swift; sourceTree = "<group>"; };
 		EE30271D76DFD51C296128111B19B2E3 /* Pods-GBViewCollectionKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitTests-frameworks.sh"; sourceTree = "<group>"; };
 		EEEE77BCB730BC724492001E6F7B86B7 /* GBViewCollectionSectionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionSectionModel.swift; sourceTree = "<group>"; };
 		EF615BED1DEE8D0912B1E06711E46C22 /* Pods-GBViewCollectionKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBViewCollectionKitTests-dummy.m"; sourceTree = "<group>"; };
@@ -158,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				0513FBBCF27AF1510A93171AEA65DDC8 /* BaseCollectionViewController.swift */,
-				ECD2BCA003D88053CFBD675C16615F09 /* CustomStatusBarNavigationController.swift */,
 				C3F0ABB0341F72B164A22B3DEF4E967C /* LoadingViewController.swift */,
 			);
 			path = "View Controllers";
@@ -176,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				2226DD8FD54E053A5899C48BFF27F674 /* GPBaseCollectionViewCell.swift */,
-				5382676C8B4BCE2CAA38BA9A4C9929FD /* GPBaseCollectionViewCell.xib */,
 			);
 			path = "Collection View Cells";
 			sourceTree = "<group>";
@@ -323,12 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				57041FB6AF5630815B6C590597B0D271 /* GPBaseCollectionViewCell.swift in Sources */,
-				043472462643F6E0B4C23EDF4B81B104 /* GPBaseCollectionViewCell.xib in Sources */,
 				273C9372C8FCAA9D2DB630BF7521E40D /* BaseCollectionViewController.swift in Sources */,
 				4D42AA1E3C130DE5846625033313501F /* GBBaseCellModel.swift in Sources */,
 				896DFEA2BCEE1356A72E4CAB5701987A /* GBViewCollectionDataSource.swift in Sources */,
 				DA4809BD7B9A6477B9D8CE827CAFD329 /* GBViewCollectionSectionModel.swift in Sources */,
-				91C082CF195752EA54F7663BD1B539F0 /* CustomStatusBarNavigationController.swift in Sources */,
 				0D25578AEE603AF547F5BD06E7DF76DE /* GBViewCollectionKit-dummy.m in Sources */,
 				0384B20A235C99C5BBF823BAAC8A46D1 /* LoadingViewController.swift in Sources */,
 			);

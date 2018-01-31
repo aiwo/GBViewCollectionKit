@@ -8,30 +8,30 @@
 
 import Foundation
 
-class GBViewCollectionSectionModel: Any {
+open class GBViewCollectionSectionModel: Any {
     
     var items = [GBBaseCellModel]()
     
-    init() {
+    public init() {
         
     }
     
-    init(items: [GBBaseCellModel]) {
+    public init(items: [GBBaseCellModel]) {
         self.items = items
     }
     
-    func add(_ item: GBBaseCellModel) {
+    public func add(_ item: GBBaseCellModel) {
         self.items.append(item)
     }
     
-    func add(_ items: [GBBaseCellModel]) {
+    public func add(_ items: [GBBaseCellModel]) {
         for item in items {
             self.add(item)
         }
     }
     
-    func remove(item: GBBaseCellModel) {
-        self.items = self.items.filter( { $0 === item } )
+    public func remove(item: GBBaseCellModel) {
+        self.items = self.items.filter( { $0 !== item } )
     }
 
 }

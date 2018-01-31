@@ -8,16 +8,16 @@
 
 import UIKit
 
-class GBViewCollectionDataSource: Any {
+open class GBViewCollectionDataSource: Any {
     
     var collectionView: UICollectionView?
     var sections = [GBViewCollectionSectionModel]()
 
-    init(sections: [GBViewCollectionSectionModel]) {
+    public init(sections: [GBViewCollectionSectionModel]) {
         self.sections = sections
     }
     
-    func item(from indexPath: IndexPath) -> GBBaseCellModel? {
+    public func item(from indexPath: IndexPath) -> GBBaseCellModel? {
         guard indexPath.section < self.sections.count else {
             return nil
         }
@@ -30,7 +30,7 @@ class GBViewCollectionDataSource: Any {
         return section.items[indexPath.row]
     }
     
-    func reloadContentView() {
+    public func reloadContentView() {
         if let collectionView = self.collectionView {
             collectionView.reloadData()
         }

@@ -1,5 +1,5 @@
 //
-//  BaseCollectionViewController.swift
+//  GBDynamicCollectionViewController.swift
 //  UpsalesTest
 //
 //  Created by Gennady Berezovsky on 21.01.18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class BaseCollectionViewController: UICollectionViewController {
+open class GBDynamicCollectionViewController: UICollectionViewController {
     
     var registeredClasses = [AnyClass]()
     
-    var dataSource: GBViewCollectionDataSource? {
+    public var dataSource: GBViewCollectionDataSource? {
         didSet {
             self.registerCells()
             dataSource?.collectionView = self.collectionView
@@ -21,7 +21,7 @@ class BaseCollectionViewController: UICollectionViewController {
     }
 }
 
-extension BaseCollectionViewController {
+extension GBDynamicCollectionViewController {
     
     func registerCells() {
         guard let dataSource = self.dataSource else {
@@ -53,9 +53,9 @@ extension BaseCollectionViewController {
     
 }
 
-extension BaseCollectionViewController {
+extension GBDynamicCollectionViewController {
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override open func numberOfSections(in collectionView: UICollectionView) -> Int {
         guard let dataSource = self.dataSource else {
             return 0
         }
@@ -63,7 +63,7 @@ extension BaseCollectionViewController {
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let dataSource = self.dataSource else {
             return 0
         }
@@ -71,14 +71,14 @@ extension BaseCollectionViewController {
         return section.items.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
             return UICollectionViewCell()
         }
         
         self.registerNib(for: item.cellViewClass as! AnyClass, collectionView: collectionView)
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(item.cellViewClass as! AnyClass), for: indexPath) as? GPBaseCollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(item.cellViewClass as! AnyClass), for: indexPath) as? GBBaseCollectionViewCell {
             item.configure(cell)
             
             return cell
@@ -87,7 +87,7 @@ extension BaseCollectionViewController {
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
             return
         }
@@ -97,9 +97,9 @@ extension BaseCollectionViewController {
     
 }
 
-extension BaseCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension GBDynamicCollectionViewController: UICollectionViewDelegateFlowLayout {
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
             return CGSize(width: collectionView.frame.width, height: 0)
         }
@@ -107,7 +107,7 @@ extension BaseCollectionViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionView.frame.width, height: item.cellHeight)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 }
