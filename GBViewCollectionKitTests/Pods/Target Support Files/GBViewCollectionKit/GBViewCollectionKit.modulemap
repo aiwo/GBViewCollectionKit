@@ -1,0 +1,6 @@
+framework module GBViewCollectionKit {
+  umbrella header "GBViewCollectionKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

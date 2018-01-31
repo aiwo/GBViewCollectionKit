@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import GBCollectionViewKit
+@testable import GBViewCollectionKit
 
 class GBCollectionViewKitTests: XCTestCase {
     
