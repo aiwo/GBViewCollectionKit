@@ -8,14 +8,13 @@
 
 import UIKit
 
-class GBViewCollectionDataSource: NSObject {
+class GBViewCollectionDataSource: Any {
     
     var collectionView: UICollectionView?
     var sections = [GBViewCollectionSectionModel]()
 
     init(sections: [GBViewCollectionSectionModel]) {
         self.sections = sections
-        super.init()
     }
     
     func item(from indexPath: IndexPath) -> GBBaseCellModel? {

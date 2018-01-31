@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GBBaseCellModel: NSObject {
+class GBBaseCellModel: Any {
     
     private let kDefalutCellHeight: CGFloat = 60.0
     
@@ -28,7 +28,6 @@ class GBBaseCellModel: NSObject {
         self.subtitle = subtitle
         self.cellViewClass = cellViewClass
         self.onDidSelect = onDidSelect
-        super.init()
     }
     
     func configure(_ cell: GBCollectionViewCell) {

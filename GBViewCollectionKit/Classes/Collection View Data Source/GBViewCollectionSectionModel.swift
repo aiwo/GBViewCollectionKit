@@ -8,17 +8,16 @@
 
 import Foundation
 
-class GBViewCollectionSectionModel: NSObject {
+class GBViewCollectionSectionModel: Any {
     
     var items = [GBBaseCellModel]()
     
-    override init() {
-        super.init()
+    init() {
+        
     }
     
     init(items: [GBBaseCellModel]) {
         self.items = items
-        super.init()
     }
     
     func add(_ item: GBBaseCellModel) {
@@ -32,7 +31,7 @@ class GBViewCollectionSectionModel: NSObject {
     }
     
     func remove(item: GBBaseCellModel) {
-        self.items = self.items.filter( { $0 != item } )
+        self.items = self.items.filter( { $0 === item } )
     }
 
 }
