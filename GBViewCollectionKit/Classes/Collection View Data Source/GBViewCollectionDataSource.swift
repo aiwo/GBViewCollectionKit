@@ -1,5 +1,5 @@
 //
-//  GBCollectionViewDataSource.swift
+//  GBViewCollectionDataSource.swift
 //  UpsalesTest
 //
 //  Created by Gennady Berezovsky on 21.01.18.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-class GBCollectionViewDataSource: NSObject {
+class GBViewCollectionDataSource: NSObject {
     
     var collectionView: UICollectionView?
-    var sections = [GBCollectionViewSectionModel]()
+    var sections = [GBViewCollectionSectionModel]()
 
-    init(sections: [GBCollectionViewSectionModel]) {
+    init(sections: [GBViewCollectionSectionModel]) {
         self.sections = sections
         super.init()
     }
     
-    func item(from indexPath: IndexPath) -> GBCollectionViewCellModel? {
+    func item(from indexPath: IndexPath) -> GBBaseCellModel? {
         guard indexPath.section < self.sections.count else {
             return nil
         }

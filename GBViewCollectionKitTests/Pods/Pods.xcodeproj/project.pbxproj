@@ -11,14 +11,14 @@
 		043472462643F6E0B4C23EDF4B81B104 /* GPBaseCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5382676C8B4BCE2CAA38BA9A4C9929FD /* GPBaseCollectionViewCell.xib */; };
 		0D25578AEE603AF547F5BD06E7DF76DE /* GBViewCollectionKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A940C5889E92AEB1A241BE8693AF63 /* GBViewCollectionKit-dummy.m */; };
 		273C9372C8FCAA9D2DB630BF7521E40D /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0513FBBCF27AF1510A93171AEA65DDC8 /* BaseCollectionViewController.swift */; };
-		4D42AA1E3C130DE5846625033313501F /* GBCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBCollectionViewCellModel.swift */; };
+		4D42AA1E3C130DE5846625033313501F /* GBBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBBaseCellModel.swift */; };
 		57041FB6AF5630815B6C590597B0D271 /* GPBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2226DD8FD54E053A5899C48BFF27F674 /* GPBaseCollectionViewCell.swift */; };
 		5AE4D1CF75C66028829018B79370FAAB /* Pods-GBViewCollectionKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6219069B7E6EC3EC804ED54F3FACC1D3 /* Pods-GBViewCollectionKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65453C8AC98D634FE907B2F8C1C5D2D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		896DFEA2BCEE1356A72E4CAB5701987A /* GBCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A7465155F2A456E9D66DDAD723C984 /* GBCollectionViewDataSource.swift */; };
+		896DFEA2BCEE1356A72E4CAB5701987A /* GBViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A7465155F2A456E9D66DDAD723C984 /* GBViewCollectionDataSource.swift */; };
 		91C082CF195752EA54F7663BD1B539F0 /* CustomStatusBarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2BCA003D88053CFBD675C16615F09 /* CustomStatusBarNavigationController.swift */; };
 		9F249DC38CD0AB44CE25B15A6FB876B3 /* GBViewCollectionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3630BB4CAAE32A631CDED80997655CAD /* GBViewCollectionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA4809BD7B9A6477B9D8CE827CAFD329 /* GBCollectionViewSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE77BCB730BC724492001E6F7B86B7 /* GBCollectionViewSectionModel.swift */; };
+		DA4809BD7B9A6477B9D8CE827CAFD329 /* GBViewCollectionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE77BCB730BC724492001E6F7B86B7 /* GBViewCollectionSectionModel.swift */; };
 		F14C2ECDA06416E55FA8E98FB8E4D3E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F188BAFE29F92E5841D6BEADEA7F4CFC /* Pods-GBViewCollectionKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF615BED1DEE8D0912B1E06711E46C22 /* Pods-GBViewCollectionKitTests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -47,7 +47,7 @@
 		6219069B7E6EC3EC804ED54F3FACC1D3 /* Pods-GBViewCollectionKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBViewCollectionKitTests-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7299632F7073A2D08707742B5617847B /* GBViewCollectionKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GBViewCollectionKit.modulemap; sourceTree = "<group>"; };
-		78A7465155F2A456E9D66DDAD723C984 /* GBCollectionViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		78A7465155F2A456E9D66DDAD723C984 /* GBViewCollectionDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionDataSource.swift; sourceTree = "<group>"; };
 		7D6C91A1E03793613DD28FDCA428421F /* Pods-GBViewCollectionKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GBViewCollectionKitTests.modulemap"; sourceTree = "<group>"; };
 		83A562368D44666C0F3E1EA9072C7832 /* Pods-GBViewCollectionKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		9376C0CD98A56E9848C1B8C9E5ECCDA3 /* Pods-GBViewCollectionKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GBViewCollectionKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -55,11 +55,11 @@
 		942E857B71546F01052F89CD5885BBC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A5A2F7225CB8C14FA647808D581E22D /* Pods-GBViewCollectionKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3F0ABB0341F72B164A22B3DEF4E967C /* LoadingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBCollectionViewCellModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBCollectionViewCellModel.swift; sourceTree = "<group>"; };
+		D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBBaseCellModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCellModel.swift; sourceTree = "<group>"; };
 		D871BD7B481FC94DF87CE7C3189BEBE5 /* Pods-GBViewCollectionKitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitTests-resources.sh"; sourceTree = "<group>"; };
 		ECD2BCA003D88053CFBD675C16615F09 /* CustomStatusBarNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomStatusBarNavigationController.swift; sourceTree = "<group>"; };
 		EE30271D76DFD51C296128111B19B2E3 /* Pods-GBViewCollectionKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitTests-frameworks.sh"; sourceTree = "<group>"; };
-		EEEE77BCB730BC724492001E6F7B86B7 /* GBCollectionViewSectionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBCollectionViewSectionModel.swift; sourceTree = "<group>"; };
+		EEEE77BCB730BC724492001E6F7B86B7 /* GBViewCollectionSectionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionSectionModel.swift; sourceTree = "<group>"; };
 		EF615BED1DEE8D0912B1E06711E46C22 /* Pods-GBViewCollectionKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBViewCollectionKitTests-dummy.m"; sourceTree = "<group>"; };
 		F1FC8FF623AEA3E16FCE1D060042B6A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,9 +192,9 @@
 		EB745342BF2F694C3E53EBA50D8B257E /* Collection View Data Source */ = {
 			isa = PBXGroup;
 			children = (
-				D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBCollectionViewCellModel.swift */,
-				78A7465155F2A456E9D66DDAD723C984 /* GBCollectionViewDataSource.swift */,
-				EEEE77BCB730BC724492001E6F7B86B7 /* GBCollectionViewSectionModel.swift */,
+				D6E8E0B05C5AF46268C35B3AAC1CB711 /* GBBaseCellModel.swift */,
+				78A7465155F2A456E9D66DDAD723C984 /* GBViewCollectionDataSource.swift */,
+				EEEE77BCB730BC724492001E6F7B86B7 /* GBViewCollectionSectionModel.swift */,
 			);
 			path = "Collection View Data Source";
 			sourceTree = "<group>";
@@ -325,9 +325,9 @@
 				57041FB6AF5630815B6C590597B0D271 /* GPBaseCollectionViewCell.swift in Sources */,
 				043472462643F6E0B4C23EDF4B81B104 /* GPBaseCollectionViewCell.xib in Sources */,
 				273C9372C8FCAA9D2DB630BF7521E40D /* BaseCollectionViewController.swift in Sources */,
-				4D42AA1E3C130DE5846625033313501F /* GBCollectionViewCellModel.swift in Sources */,
-				896DFEA2BCEE1356A72E4CAB5701987A /* GBCollectionViewDataSource.swift in Sources */,
-				DA4809BD7B9A6477B9D8CE827CAFD329 /* GBCollectionViewSectionModel.swift in Sources */,
+				4D42AA1E3C130DE5846625033313501F /* GBBaseCellModel.swift in Sources */,
+				896DFEA2BCEE1356A72E4CAB5701987A /* GBViewCollectionDataSource.swift in Sources */,
+				DA4809BD7B9A6477B9D8CE827CAFD329 /* GBViewCollectionSectionModel.swift in Sources */,
 				91C082CF195752EA54F7663BD1B539F0 /* CustomStatusBarNavigationController.swift in Sources */,
 				0D25578AEE603AF547F5BD06E7DF76DE /* GBViewCollectionKit-dummy.m in Sources */,
 				0384B20A235C99C5BBF823BAAC8A46D1 /* LoadingViewController.swift in Sources */,

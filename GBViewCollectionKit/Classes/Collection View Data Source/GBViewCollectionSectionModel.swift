@@ -1,5 +1,5 @@
 //
-//  GBCollectionViewSectionModel.swift
+//  GBViewCollectionSectionModel.swift
 //  UpsalesTest
 //
 //  Created by Gennady Berezovsky on 21.01.18.
@@ -8,26 +8,30 @@
 
 import Foundation
 
-class GBCollectionViewSectionModel: NSObject {
+class GBViewCollectionSectionModel: NSObject {
     
-    var items = [GBCollectionViewCellModel]()
+    var items = [GBBaseCellModel]()
     
-    init(items: [GBCollectionViewCellModel]) {
+    override init() {
+        super.init()
+    }
+    
+    init(items: [GBBaseCellModel]) {
         self.items = items
         super.init()
     }
     
-    func add(_ item: GBCollectionViewCellModel) {
+    func add(_ item: GBBaseCellModel) {
         self.items.append(item)
     }
     
-    func add(_ items: [GBCollectionViewCellModel]) {
+    func add(_ items: [GBBaseCellModel]) {
         for item in items {
             self.add(item)
         }
     }
     
-    func remove(item: GBCollectionViewCellModel) {
+    func remove(item: GBBaseCellModel) {
         self.items = self.items.filter( { $0 != item } )
     }
 

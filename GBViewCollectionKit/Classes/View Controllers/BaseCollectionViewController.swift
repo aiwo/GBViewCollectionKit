@@ -12,7 +12,7 @@ class BaseCollectionViewController: UICollectionViewController {
     
     var registeredClasses = [AnyClass]()
     
-    var dataSource: GBCollectionViewDataSource? {
+    var dataSource: GBViewCollectionDataSource? {
         didSet {
             self.registerCells()
             dataSource?.collectionView = self.collectionView

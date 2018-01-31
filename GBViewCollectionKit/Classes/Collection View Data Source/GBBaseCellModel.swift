@@ -1,5 +1,5 @@
 //
-//  GBCollectionViewCellModel.swift
+//  GBBaseCellModel.swift
 //  UpsalesTest
 //
 //  Created by Gennady Berezovsky on 21.01.18.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class GBCollectionViewCellModel: NSObject {
+class GBBaseCellModel: NSObject {
     
     private let kDefalutCellHeight: CGFloat = 60.0
     
     var title: String?
     var subtitle: String?
     var cellViewClass: GBCollectionViewCell.Type
-    var onDidSelect: ((GBCollectionViewCellModel) -> ())?
+    var onDidSelect: ((GBBaseCellModel) -> ())?
     
     var cellHeight: CGFloat {
         get {
@@ -23,7 +23,7 @@ class GBCollectionViewCellModel: NSObject {
         }
     }
     
-    init(title: String? = nil, subtitle: String? = nil, cellViewClass: GBCollectionViewCell.Type, onDidSelect: ((GBCollectionViewCellModel) -> ())? = nil) {
+    init(title: String? = nil, subtitle: String? = nil, cellViewClass: GBCollectionViewCell.Type, onDidSelect: ((GBBaseCellModel) -> ())? = nil) {
         self.title = title
         self.subtitle = subtitle
         self.cellViewClass = cellViewClass
