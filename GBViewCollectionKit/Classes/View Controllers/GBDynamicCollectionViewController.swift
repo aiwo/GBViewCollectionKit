@@ -14,7 +14,6 @@ open class GBDynamicCollectionViewController: UICollectionViewController {
     
     public var dataSource: GBViewCollectionDataSource? {
         didSet {
-            self.registerCells()
             dataSource?.collectionView = self.collectionView
             self.collectionView?.reloadData()
         }
@@ -23,32 +22,28 @@ open class GBDynamicCollectionViewController: UICollectionViewController {
 
 extension GBDynamicCollectionViewController {
     
-    func registerCells() {
-        guard let dataSource = self.dataSource else {
-            return
-        }
-        
-        for section in dataSource.sections {
-            for item in section.items {
-                
-                self.collectionView?.register(item.cellViewClass as? AnyClass, forCellWithReuseIdentifier: NSStringFromClass(item.cellViewClass as! AnyClass))
-            }
-        }
-    }
-    
-    func registerNib(for cellClass: AnyClass, collectionView: UICollectionView) {
+    func registerNib(forCellClass cellClass: AnyClass, collectionView: UICollectionView) {
         if !self.registeredClasses.filter({ $0 == cellClass }).isEmpty {
             return
         }
         
-        let reuseIdentifier = NSStringFromClass(cellClass)
-        guard let nibName = reuseIdentifier.components(separatedBy: ["."]).last else {
-            return
-        }
-        let nib = UINib.init(nibName: nibName, bundle: Bundle.main)
+        let reuseIdentifier = String(describing: cellClass)
+        let nib = UINib.init(nibName: reuseIdentifier, bundle: Bundle.main)
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
         self.registeredClasses.append(cellClass)
+    }
+    
+    func registerNib(forHeaderFooterViewClass viewClass: AnyClass, collectionView: UICollectionView) {
+        if !self.registeredClasses.filter({ $0 == viewClass }).isEmpty {
+            return
+        }
+        
+        let reuseIdentifier = String(describing: viewClass)
+        let nib = UINib.init(nibName: reuseIdentifier, bundle: Bundle.main)
+        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
+        
+        self.registeredClasses.append(viewClass)
     }
     
 }
@@ -72,19 +67,33 @@ extension GBDynamicCollectionViewController {
     }
     
     override open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
             return UICollectionViewCell()
         }
         
-        self.registerNib(for: item.cellViewClass as! AnyClass, collectionView: collectionView)
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(item.cellViewClass as! AnyClass), for: indexPath) as? GBBaseCollectionViewCell {
+        self.registerNib(forCellClass: item.cellViewClass as! AnyClass, collectionView: collectionView)
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: item.cellViewClass), for: indexPath) as? GBBaseCollectionViewCell {
             item.configure(cell)
             
             return cell
         } else {
             return UICollectionViewCell()
         }
+    }
+    
+    override open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let dataSource = self.dataSource, let section = dataSource.section(from: indexPath), let headerModel = section.headerModel else {
+            return UICollectionReusableView()
+        }
+        
+        self.registerNib(forHeaderFooterViewClass: headerModel.viewClass as! AnyClass, collectionView: collectionView)
+        
+        let reuseIdentifier = String(describing: headerModel.viewClass)
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: reuseIdentifier, for: indexPath) as! GBBaseCollectionViewHeaderFooterView
+        headerModel.configure(view)
+        
+        return view
+        
     }
     
     override open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -105,6 +114,14 @@ extension GBDynamicCollectionViewController: UICollectionViewDelegateFlowLayout 
         }
         
         return CGSize(width: collectionView.frame.width, height: item.cellHeight)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        guard let dataSource = self.dataSource, let headerModel = dataSource.sections[section].headerModel else {
+            return CGSize(width: collectionView.frame.width, height: 0)
+        }
+        
+        return CGSize(width: collectionView.frame.width, height: headerModel.height)
     }
     
     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

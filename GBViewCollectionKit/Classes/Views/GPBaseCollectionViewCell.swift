@@ -19,6 +19,16 @@ open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell 
     @IBOutlet public var contentDetailTextLabel: UILabel?
     @IBOutlet public var contentImageView: UIImageView?
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupDefaults()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setupDefaults()
+    }
+    
     override open func awakeFromNib() {
         super.awakeFromNib()
         

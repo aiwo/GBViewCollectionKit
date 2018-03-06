@@ -18,6 +18,8 @@ open class GBBaseCellModel: Any {
     public var onGetImage: (() -> UIImage?)?
     public var onDidSelect: ((GBBaseCellModel) -> ())?
     
+    open weak var parent: GBViewCollectionSectionModel?
+    
     var cellHeight: CGFloat {
         get {
             return kDefalutCellHeight
@@ -32,7 +34,7 @@ open class GBBaseCellModel: Any {
         self.onGetImage = onGetImage
     }
     
-    func configure(_ cell: GBCollectionViewCell) {
+    open func configure(_ cell: GBCollectionViewCell) {
         cell.contentTextLabel?.text = self.title
         cell.contentDetailTextLabel?.text = self.subtitle
         if let onGetImage = self.onGetImage {

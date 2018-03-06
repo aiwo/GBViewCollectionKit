@@ -11,10 +11,29 @@ import UIKit
 open class GBViewCollectionDataSource: Any {
     
     var collectionView: UICollectionView?
-    var sections = [GBViewCollectionSectionModel]()
+    open var sections = [GBViewCollectionSectionModel]()
+    
+    public init() {
+        
+    }
 
     public init(sections: [GBViewCollectionSectionModel]) {
         self.sections = sections
+    }
+    
+    public func add(section: GBViewCollectionSectionModel) {
+        self.sections.append(section)
+    }
+    
+    public func add(sections: [GBViewCollectionSectionModel]) {
+        for section in sections {
+            self.sections.append(section)
+            section.dataSource = self
+        }
+    }
+    
+    public func remove(section: GBViewCollectionSectionModel) {
+        self.sections = self.sections.filter { $0 !== section }
     }
     
     public func item(from indexPath: IndexPath) -> GBBaseCellModel? {
@@ -30,9 +49,22 @@ open class GBViewCollectionDataSource: Any {
         return section.items[indexPath.row]
     }
     
+    public func section(from indexPath: IndexPath) -> GBViewCollectionSectionModel? {
+        guard indexPath.section < self.sections.count else {
+            return nil
+        }
+        return self.sections[indexPath.section]
+    }
+    
     public func reloadContentView() {
         if let collectionView = self.collectionView {
             collectionView.reloadData()
+        }
+    }
+    
+    public func reloadSection(at index: Int) {
+        if let collectionView = self.collectionView {
+            collectionView.reloadSections(IndexSet(integer: index))
         }
     }
 
