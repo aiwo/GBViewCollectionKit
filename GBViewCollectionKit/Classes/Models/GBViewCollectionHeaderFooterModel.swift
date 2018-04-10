@@ -13,7 +13,7 @@ open class GBViewCollectionHeaderFooterModel: Any {
     var subtitle: String?
     var viewClass: GBCollectionViewHeaderFooterView.Type
     
-    public var height: CGFloat = 0
+    open var height: CGFloat = 0
     
     public init(title: String? = nil, subtitle: String? = nil, viewClass: GBCollectionViewHeaderFooterView.Type) {
         self.title = title

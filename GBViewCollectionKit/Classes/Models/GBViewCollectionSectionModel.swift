@@ -48,5 +48,13 @@ open class GBViewCollectionSectionModel: Any {
             dataSource.reloadSection(at: index)
         }
     }
+    
+    public func isItemLastInSection(_ item: GBBaseCellModel) -> Bool {
+        guard let index = self.items.index(where: { $0 === item }) else {
+            return false
+        }
+        
+        return index == self.itemsCount - 1
+    }
 
 }

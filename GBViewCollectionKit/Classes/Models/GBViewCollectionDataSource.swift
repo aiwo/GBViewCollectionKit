@@ -14,6 +14,10 @@ open class GBViewCollectionDataSource: Any {
     open var sections = [GBViewCollectionSectionModel]()
     
     public init() {
+        self.setupSections()
+    }
+    
+    open func setupSections() {
         
     }
 
