@@ -13,6 +13,7 @@ Library that implements MVVM (Model View ViewModel)-Pattern for Table/Collection
   s.source           = { :git => 'git@bitbucket.org:aiwo/GBViewCollectionKit.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
+  s.swift_version = '4.0'
 
   s.source_files = 'GBViewCollectionKit/Classes/**/*'
 
