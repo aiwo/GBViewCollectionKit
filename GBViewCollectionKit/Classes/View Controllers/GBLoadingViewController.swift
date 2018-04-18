@@ -9,9 +9,6 @@
 import UIKit
 
 open class GBLoadingViewController: UIViewController {
-
-    @IBOutlet var activityIndicator: UIActivityIndicatorView?
-    @IBOutlet var textLabel: UILabel?
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +22,6 @@ open class GBLoadingViewController: UIViewController {
         
         activityIndicatorView.startAnimating()
         
-        self.textLabel?.text = ""
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.5)
     }
 

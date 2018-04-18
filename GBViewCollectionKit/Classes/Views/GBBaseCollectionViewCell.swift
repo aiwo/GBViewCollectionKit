@@ -15,6 +15,7 @@ public protocol GBCollectionViewCell {
 }
 
 open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell {
+    
     @IBOutlet public var contentTextLabel: UILabel?
     @IBOutlet public var contentDetailTextLabel: UILabel?
     @IBOutlet public var contentImageView: UIImageView?
@@ -35,7 +36,17 @@ open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell 
         self.setupDefaults()
     }
     
-    open func setupDefaults() {
+    open override func prepareForReuse() {
+        super.prepareForReuse()
         
+        self.contentImageView?.image = nil
+        self.contentTextLabel?.text = ""
+        self.contentDetailTextLabel?.text = ""
+    }
+    
+    open func setupDefaults() {
+        let view = UIView(frame: self.bounds)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.1)
+        self.selectedBackgroundView = view
     }
 }
