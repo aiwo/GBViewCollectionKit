@@ -1,6 +1,6 @@
 //
 //  GBDynamicCollectionViewController.swift
-//  UpsalesTest
+//  Haptic
 //
 //  Created by Gennady Berezovsky on 21.01.18.
 //  Copyright © 2018 Gennady Berezovsky. All rights reserved.
@@ -12,7 +12,7 @@ open class GBDynamicCollectionViewController: UICollectionViewController {
     
     var registeredClasses = [AnyClass]()
     
-    public var dataSource: GBViewCollectionDataSource? {
+    open var dataSource: GBViewCollectionDataSource? {
         didSet {
             dataSource?.collectionView = self.collectionView
             self.collectionView?.reloadData()
@@ -74,7 +74,6 @@ extension GBDynamicCollectionViewController {
         self.registerNib(forCellClass: item.cellViewClass as! AnyClass, collectionView: collectionView)
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: item.cellViewClass), for: indexPath) as? GBBaseCollectionViewCell {
             item.configure(cell)
-            
             return cell
         } else {
             return UICollectionViewCell()
@@ -93,7 +92,10 @@ extension GBDynamicCollectionViewController {
         headerModel.configure(view)
         
         return view
-        
+    }
+    
+    override open func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        view.layer.zPosition = 0.0
     }
     
     override open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

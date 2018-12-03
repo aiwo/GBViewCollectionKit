@@ -1,6 +1,6 @@
 //
 //  GBLoadingViewController.swift
-//  UpsalesTest
+//  Haptic
 //
 //  Created by Gennady Berezovsky on 22.01.18.
 //  Copyright © 2018 Gennady Berezovsky. All rights reserved.

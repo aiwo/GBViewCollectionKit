@@ -1,6 +1,6 @@
 //
 //  GBViewCollectionSectionModel.swift
-//  UpsalesTest
+//  Haptic
 //
 //  Created by Gennady Berezovsky on 21.01.18.
 //  Copyright © 2018 Gennady Berezovsky. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class GBViewCollectionSectionModel: Any {
+open class GBViewCollectionSectionModel {
     
     var items = [GBBaseCellModel]()
     public var headerModel: GBViewCollectionHeaderFooterModel?
