@@ -118,6 +118,14 @@ extension GBDynamicCollectionViewController: UICollectionViewDelegateFlowLayout 
         return CGSize(width: collectionView.frame.width, height: item.cellHeight)
     }
     
+    open override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
+            return false
+        }
+        
+        return item.onDidSelect != nil
+    }
+    
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         guard let dataSource = self.dataSource, let headerModel = dataSource.sections[section].headerModel else {
             return CGSize(width: collectionView.frame.width, height: 0)
