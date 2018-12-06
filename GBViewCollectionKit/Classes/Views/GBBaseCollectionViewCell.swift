@@ -9,10 +9,10 @@
 import UIKit
 
 public protocol GBCollectionViewCell {
-    weak var contentTextLabel: UILabel? { get set }
-    weak var contentDetailTextLabel: UILabel? { get set }
-    weak var contentImageView: UIImageView? { get set }
-    weak var separatorView: UIView? { get set }
+    var contentTextLabel: UILabel? { get set }
+    var contentDetailTextLabel: UILabel? { get set }
+    var contentImageView: UIImageView? { get set }
+    var separatorView: UIView? { get set }
 }
 
 open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell {

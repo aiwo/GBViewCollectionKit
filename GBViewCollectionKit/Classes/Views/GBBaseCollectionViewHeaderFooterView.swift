@@ -8,9 +8,9 @@
 import UIKit
 
 public protocol GBCollectionViewHeaderFooterView {
-    weak var contentTextLabel: UILabel? { get set }
-    weak var contentDetailTextLabel: UILabel? { get set }
-    weak var contentImageView: UILabel? { get set }
+    var contentTextLabel: UILabel? { get set }
+    var contentDetailTextLabel: UILabel? { get set }
+    var contentImageView: UILabel? { get set }
 }
 
 open class GBBaseCollectionViewHeaderFooterView: UICollectionReusableView, GBCollectionViewHeaderFooterView {

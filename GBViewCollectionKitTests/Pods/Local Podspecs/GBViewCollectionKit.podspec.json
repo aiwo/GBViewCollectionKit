@@ -1,6 +1,6 @@
 {
   "name": "GBViewCollectionKit",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "summary": "Model based configuration of collection views.",
   "description": "Library that implements MVVM (Model View ViewModel)-Pattern for Table/Collection-Views. Based on work of Kristaps Zeibarts.",
   "homepage": "https://bitbucket.org/aiwo/GBViewCollectionKit",
@@ -9,14 +9,15 @@
     "file": "LICENSE"
   },
   "authors": {
-    "Gennady Berezovsky": "gennady.berezovsky@gmail.com"
+    "Gennady Berezovsky": "bergencroc@gmail.com"
   },
   "source": {
     "git": "git@bitbucket.org:aiwo/GBViewCollectionKit.git",
-    "tag": "0.0.3"
+    "tag": "0.1.0"
   },
   "platforms": {
     "ios": "9.0"
   },
+  "swift_version": "4.0",
   "source_files": "GBViewCollectionKit/Classes/**/*"
 }

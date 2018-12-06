@@ -13,7 +13,7 @@ class GBCollectionViewKitTests: XCTestCase {
     
     func testAddItem() {
         let section = GBViewCollectionSectionModel()
-        let item = GBBaseCellModel(cellViewClass: GPBaseCollectionViewCell.self)
+        let item = GBBaseCellModel(cellViewClass: GBBaseCollectionViewCell.self)
         section.add(item)
         XCTAssertEqual(section.items.count, 1)
     }
