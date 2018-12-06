@@ -15,7 +15,7 @@
 		80BF6C01202255D200B0951F /* GBViewCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBViewCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80BF6C06202255D200B0951F /* GBViewCollectionKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBViewCollectionKit.swift; sourceTree = "<group>"; };
 		80BF6C08202255D200B0951F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80BF6C12202258E000B0951F /* GBViewCollectionKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GBViewCollectionKit.podspec; sourceTree = "<group>"; };
+		80BF6C12202258E000B0951F /* GBViewCollectionKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GBViewCollectionKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		80BF6C13202258E000B0951F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		80BF6C14202258E000B0951F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		890A5FCFA971221AC5B5F934 /* Pods-GBViewCollectionKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBViewCollectionKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GBViewCollectionKitTests/Pods-GBViewCollectionKitTests.debug.xcconfig"; sourceTree = "<group>"; };
