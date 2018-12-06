@@ -21,6 +21,10 @@ open class GBBaseCellModel: Any {
     public var onGetImage: (() -> UIImage?)?
     public var onDidSelect: ((GBBaseCellModel) -> ())?
     
+    public var isLastInSection: Bool {
+        return parent?.items.last === self
+    }
+    
     static var referenceCells = [String : GBBaseCollectionViewCell]()
     
     open weak var parent: GBViewCollectionSectionModel?
@@ -69,6 +73,8 @@ open class GBBaseCellModel: Any {
         if let onGetImage = self.onGetImage {
             cell.contentImageView?.image = onGetImage()
         }
+        
+        cell.separatorView?.isHidden = isLastInSection
     }
     
     func indexPath() -> IndexPath? {
