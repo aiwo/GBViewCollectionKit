@@ -29,7 +29,7 @@ open class GBViewCollectionSectionModel {
     
     public func add(_ item: GBBaseCellModel) {
         self.items.append(item)
-        item.parent = self
+        item.section = self
     }
     
     public func add(_ items: [GBBaseCellModel]) {
@@ -40,7 +40,7 @@ open class GBViewCollectionSectionModel {
     
     public func remove(item: GBBaseCellModel) {
         self.items = self.items.filter( { $0 !== item } )
-        item.parent = nil
+        item.section = nil
     }
     
     public func reloadCells(animated: Bool = true) {

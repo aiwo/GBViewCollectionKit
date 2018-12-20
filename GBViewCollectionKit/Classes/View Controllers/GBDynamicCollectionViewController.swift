@@ -14,8 +14,21 @@ open class GBDynamicCollectionViewController: UICollectionViewController {
     
     open var dataSource: GBViewCollectionDataSource? {
         didSet {
-            dataSource?.collectionView = self.collectionView
+            dataSource?.collectionView = collectionView
+
+            setupCommands()
+
             self.collectionView?.reloadData()
+        }
+    }
+
+    func setupCommands() {
+        dataSource?.onScrollToIndexPath = { (indexPath) in
+            self.collectionView?.scrollToItem(at: indexPath, at: [], animated: true)
+        }
+
+        dataSource?.onGetIndexPathAtPoint = { (point) in
+            return self.collectionView?.indexPathForItem(at: point)
         }
     }
 }
@@ -67,7 +80,7 @@ extension GBDynamicCollectionViewController {
     }
     
     override open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
+        guard let dataSource = self.dataSource, let item = dataSource.itemFrom(indexPath) else {
             return UICollectionViewCell()
         }
         
@@ -99,7 +112,7 @@ extension GBDynamicCollectionViewController {
     }
     
     override open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
+        guard let dataSource = self.dataSource, let item = dataSource.itemFrom(indexPath) else {
             return
         }
         
@@ -111,7 +124,7 @@ extension GBDynamicCollectionViewController {
 extension GBDynamicCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
+        guard let dataSource = self.dataSource, let item = dataSource.itemFrom(indexPath) else {
             return CGSize(width: collectionView.frame.width, height: 0)
         }
         
@@ -119,7 +132,7 @@ extension GBDynamicCollectionViewController: UICollectionViewDelegateFlowLayout 
     }
     
     open override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        guard let dataSource = self.dataSource, let item = dataSource.item(from: indexPath) else {
+        guard let dataSource = self.dataSource, let item = dataSource.itemFrom(indexPath) else {
             return false
         }
         

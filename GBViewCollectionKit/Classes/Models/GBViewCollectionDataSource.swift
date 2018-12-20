@@ -12,6 +12,11 @@ open class GBViewCollectionDataSource {
     
     var collectionView: UICollectionView?
     open var sections = [GBViewCollectionSectionModel]()
+
+    var nextFirstResponderModel: GBBaseCellModel?
+
+    var onScrollToIndexPath: ((IndexPath) -> Void)?
+    var onGetIndexPathAtPoint: ((CGPoint) -> IndexPath?)?
     
     public init() {
         self.setupSections()
@@ -79,18 +84,22 @@ extension GBViewCollectionDataSource {
 }
 
 extension GBViewCollectionDataSource {
-    
-    public func item(from indexPath: IndexPath) -> GBBaseCellModel? {
-        guard indexPath.section < self.sections.count else {
+
+    public func itemFor(row: Int, section: Int) -> GBBaseCellModel? {
+        guard section < sections.count else {
             return nil
         }
-        let section = self.sections[indexPath.section]
-        
-        guard indexPath.row < section.items.count else {
+        let section = sections[section]
+
+        guard row < section.items.count else {
             return nil
         }
-        
-        return section.items[indexPath.row]
+
+        return section.items[row]
+    }
+
+    public func itemFrom(_ indexPath: IndexPath) -> GBBaseCellModel? {
+        return itemFor(row: indexPath.row, section: indexPath.section)
     }
     
     public func section(from indexPath: IndexPath) -> GBViewCollectionSectionModel? {

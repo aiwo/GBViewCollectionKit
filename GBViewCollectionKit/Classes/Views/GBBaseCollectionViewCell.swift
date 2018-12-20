@@ -8,11 +8,14 @@
 
 import UIKit
 
-public protocol GBCollectionViewCell {
+public protocol GBCollectionViewCell: class {
     var contentTextLabel: UILabel? { get set }
     var contentDetailTextLabel: UILabel? { get set }
     var contentImageView: UIImageView? { get set }
     var separatorView: UIView? { get set }
+
+    var isValid: Bool { get set }
+    var isEnabled: Bool { get set }
 }
 
 open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell {
@@ -21,6 +24,9 @@ open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell 
     @IBOutlet public var contentDetailTextLabel: UILabel?
     @IBOutlet public var contentImageView: UIImageView?
     @IBOutlet public var separatorView: UIView?
+
+    public var isValid: Bool = true
+    public var isEnabled: Bool = true
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
