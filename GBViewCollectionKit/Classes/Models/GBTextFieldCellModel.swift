@@ -3,25 +3,33 @@
 //  GBViewCollectionKit
 //
 //  Created by Gennady Berezovsky on 20.12.18.
+//  Copyright © 2018 Gennady Berezovsky. All rights reserved.
 //
 
 import Foundation
 
-class GBTextFieldCellModel: GBBaseCellModel {
+open class GBTextFieldCellModel: GBBaseCellModel {
 
     var placeholder: String?
-    var text: String?
+
     var onGetText: (() -> String?)?
     var onSetText: ((String?) -> Void)?
+    var text: String? {
+        get {
+            return onGetText?()
+        }
+        set {
+            onSetText?(text)
+        }
+    }
 
     var tapOutsideGestureRecognizer: UITapGestureRecognizer?
 
-    var onTextFieldShouldChangeCharacters: ((UITextField, NSRange, String) -> Bool)?
-    var onTextFieldDidBeginEditing: ((UITextField) -> Void)?
-    var onTextFieldDidEndEditing: ((UITextField, Bool) -> Void)?
-    var onTextFieldDidChange: ((UITextField) -> Void)?
+    public var onTextFieldShouldChangeCharacters: ((UITextField, NSRange, String) -> Bool)?
+    public var onTextFieldDidEndEditing: ((UITextField, Bool) -> Void)?
+    public var onTextFieldDidChange: ((UITextField) -> Void)?
 
-    init(placeholder: String?, onGetText: (() -> String?)?, onSetText: ((String?) -> Void)?, cellViewClass: GBTextFieldCollectionViewCell.Type) {
+    public init(placeholder: String?, onGetText: (() -> String?)?, onSetText: ((String?) -> Void)?, cellViewClass: GBTextFieldCollectionViewCell.Type) {
         self.placeholder = placeholder?.uppercased()
         self.onGetText = onGetText
         self.onSetText = onSetText
@@ -61,7 +69,7 @@ class GBTextFieldCellModel: GBBaseCellModel {
         return nil;
     }
 
-    override func configure(_ cell: GBCollectionViewCell) {
+    override open func configure(_ cell: GBCollectionViewCell) {
         super.configure(cell)
 
         guard let textFieldCell = cell as? GBTextFieldCollectionViewCell else {
@@ -143,12 +151,12 @@ class GBTextFieldCellModel: GBBaseCellModel {
 
 extension GBTextFieldCellModel: UIGestureRecognizerDelegate {
 
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         handleTapOutside(gestureRecognizer)
         return false
     }
 
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         let point = touch.location(in: section?.dataSource?.collectionView)
         guard let indexPath = section?.dataSource?.onGetIndexPathAtPoint?(point),
             let currentIndexPath = self.indexPath() else {

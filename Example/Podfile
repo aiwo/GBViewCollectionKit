@@ -1,10 +1,13 @@
 use_frameworks!
-# source 'https://github.com/delivero/iOS_PodsSpecs.git'
+
 platform :ios, :deployment_target => "9.0"
 
-target 'GBViewCollectionKitTests' do
+target 'GBViewCollectionKitExample' do
     pod 'GBViewCollectionKit', :path => '../'
-    
+
+    target 'GBViewCollectionKitTests' do
+        inherit! :search_paths
+    end
 end
 
 post_install do |installer|

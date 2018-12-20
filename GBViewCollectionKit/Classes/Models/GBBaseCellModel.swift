@@ -1,6 +1,6 @@
 //
 //  GBBaseCellModel.swift
-//  Haptic
+//  GBViewCollectionKit
 //
 //  Created by Gennady Berezovsky on 21.01.18.
 //  Copyright © 2018 Gennady Berezovsky. All rights reserved.

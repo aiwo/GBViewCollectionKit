@@ -1,6 +1,6 @@
 //
 //  GBBaseCollectionViewCell.swift
-//  Haptic
+//  GBViewCollectionKit
 //
 //  Created by Gennady Berezovsky on 21.01.18.
 //  Copyright © 2018 Gennady Berezovsky. All rights reserved.
@@ -16,6 +16,8 @@ public protocol GBCollectionViewCell: class {
 
     var isValid: Bool { get set }
     var isEnabled: Bool { get set }
+
+    func setupDefaults()
 }
 
 open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell {

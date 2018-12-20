@@ -1,6 +1,6 @@
 //
 //  GBViewCollectionDataSource.swift
-//  Haptic
+//  GBViewCollectionKit
 //
 //  Created by Gennady Berezovsky on 21.01.18.
 //  Copyright © 2018 Gennady Berezovsky. All rights reserved.
@@ -27,6 +27,10 @@ open class GBViewCollectionDataSource {
     }
 
     public init(sections: [GBViewCollectionSectionModel]) {
+        sections.forEach { (section) in
+            section.dataSource = self
+        }
+        
         self.sections = sections
     }
     

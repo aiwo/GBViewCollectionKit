@@ -3,11 +3,12 @@
 //  GBViewCollectionKit
 //
 //  Created by Gennady Berezovsky on 20.12.18.
+//  Copyright © 2018 Gennady Berezovsky. All rights reserved.
 //
 
 import Foundation
 
-protocol GBTextFieldCollectionViewCell: GBCollectionViewCell {
+public protocol GBTextFieldCollectionViewCell: GBCollectionViewCell {
 
     var contentTextField: UITextField? { get set }
 
@@ -20,29 +21,34 @@ protocol GBTextFieldCollectionViewCell: GBCollectionViewCell {
 
 }
 
-class GBBaseTextFieldCollectionViewCell: GBBaseCollectionViewCell {
+open class GBBaseTextFieldCollectionViewCell: GBBaseCollectionViewCell, GBTextFieldCollectionViewCell, UITextFieldDelegate {
 
-    @IBOutlet public var contentTextField: UITextField!
+    @IBOutlet public var contentTextField: UITextField?
 
-    var didPressReturn = false
+    public var didPressReturn = false
 
-    var onTextFieldShouldChangeCharacters: ((UITextField, NSRange, String) -> Bool)?
-    var onTextFieldDidBeginEditing: ((UITextField) -> Void)?
-    var onTextFieldDidEndEditing: ((UITextField, Bool) -> Void)?
-    var onTextFieldDidChange: ((UITextField) -> Void)?
+    public var onTextFieldShouldChangeCharacters: ((UITextField, NSRange, String) -> Bool)?
+    public var onTextFieldDidBeginEditing: ((UITextField) -> Void)?
+    public var onTextFieldDidEndEditing: ((UITextField, Bool) -> Void)?
+    public var onTextFieldDidChange: ((UITextField) -> Void)?
 
-    override func setupDefaults() {
+    override open func setupDefaults() {
         super.setupDefaults()
 
-        contentTextField.isEnabled = true
-        contentTextField.delegate = self
+        contentTextField?.isEnabled = true
+        contentTextField?.delegate = self
 
         onTextFieldDidEndEditing = nil
-        contentTextField.removeTarget(self, action: nil, for: .editingChanged)
-        contentTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        contentTextField?.removeTarget(self, action: nil, for: .editingChanged)
+        contentTextField?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
 
-    override func becomeFirstResponder() -> Bool {
+    override open func becomeFirstResponder() -> Bool {
+        guard let contentTextField = contentTextField else {
+            assertionFailure()
+            return super.becomeFirstResponder()
+        }
+
         return contentTextField.becomeFirstResponder()
     }
 
@@ -50,27 +56,24 @@ class GBBaseTextFieldCollectionViewCell: GBBaseCollectionViewCell {
         onTextFieldDidChange?(textField)
     }
 
-}
+    // MARK: UITextFieldDelegate Methods
 
-extension GBBaseTextFieldCollectionViewCell: UITextFieldDelegate {
-
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         onTextFieldDidEndEditing?(textField, didPressReturn)
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         didPressReturn = true
         textField.resignFirstResponder()
         return true
     }
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         didPressReturn = false
         onTextFieldDidBeginEditing?(textField)
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return onTextFieldShouldChangeCharacters?(textField, range, string) ?? true
     }
 
