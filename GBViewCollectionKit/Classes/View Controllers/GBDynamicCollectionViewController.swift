@@ -84,7 +84,7 @@ extension GBDynamicCollectionViewController {
             return UICollectionViewCell()
         }
         
-        self.registerNib(forCellClass: item.cellViewClass as! AnyClass, collectionView: collectionView)
+        self.registerNib(forCellClass: item.cellViewClass as AnyClass, collectionView: collectionView)
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: item.cellViewClass), for: indexPath) as? GBBaseCollectionViewCell {
             item.configure(cell)
             return cell
