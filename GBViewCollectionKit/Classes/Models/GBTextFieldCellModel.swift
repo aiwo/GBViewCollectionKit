@@ -14,13 +14,15 @@ open class GBTextFieldCellModel: GBBaseCellModel {
 
     var onGetText: (() -> String?)?
     var onSetText: ((String?) -> Void)?
+    
+    var textPrivate: String? {
+        didSet {
+            onSetText?(textPrivate)
+        }
+    }
+    
     var text: String? {
-        get {
-            return onGetText?()
-        }
-        set {
-            onSetText?(text)
-        }
+        return textPrivate
     }
 
     var tapOutsideGestureRecognizer: UITapGestureRecognizer?
@@ -85,7 +87,7 @@ open class GBTextFieldCellModel: GBBaseCellModel {
                 return
             }
 
-            self.text = textField.text
+            self.textPrivate = textField.text
 
             self.reloadCellValidity()
             if didPressReturn {
@@ -129,7 +131,7 @@ open class GBTextFieldCellModel: GBBaseCellModel {
                 return
             }
 
-            self.text = textField.text
+            self.textPrivate = textField.text
             onTextFieldDidChange(textField)
         }
 
@@ -140,7 +142,7 @@ open class GBTextFieldCellModel: GBBaseCellModel {
             return
         }
 
-        text = textFieldCell.contentTextField?.text
+        textPrivate = textFieldCell.contentTextField?.text
         section?.dataSource?.collectionView?.endEditing(true)
         if let tapOutsideGestureRecognizer = tapOutsideGestureRecognizer {
             section?.dataSource?.collectionView?.removeGestureRecognizer(tapOutsideGestureRecognizer)
