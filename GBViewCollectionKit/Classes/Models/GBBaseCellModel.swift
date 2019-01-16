@@ -89,7 +89,7 @@ open class GBBaseCellModel: NSObject {
         cell.isEnabled = isEnabled
     }
     
-    func indexPath() -> IndexPath? {
+    public func indexPath() -> IndexPath? {
         guard let section = self.section,
             let itemIndex = self.section?.items.index(where: { $0 === self }),
             let sectionIndex = self.section?.dataSource?.sections.index(where: { $0 === section }) else {
@@ -99,7 +99,7 @@ open class GBBaseCellModel: NSObject {
         return IndexPath(item: itemIndex, section: sectionIndex)
     }
     
-    open func cell() -> GBCollectionViewCell? {
+    public func cell() -> GBCollectionViewCell? {
         guard let indexPath = self.indexPath() else {
             return nil
         }

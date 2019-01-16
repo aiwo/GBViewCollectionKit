@@ -16,5 +16,10 @@ Library that implements MVVM (Model View ViewModel)-Pattern for Table/Collection
   s.swift_version = '4.0'
 
   s.source_files = 'GBViewCollectionKit/Classes/**/*'
+  s.resource_bundles = {
+      'GBViewCollectionKitResources' => [
+        'GBViewCollectionKit/Classes/**/*.xib'
+      ]
+  }
 
 end

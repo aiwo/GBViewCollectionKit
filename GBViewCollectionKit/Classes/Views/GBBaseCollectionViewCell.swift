@@ -27,8 +27,8 @@ open class GBBaseCollectionViewCell: UICollectionViewCell, GBCollectionViewCell 
     @IBOutlet public var contentImageView: UIImageView?
     @IBOutlet public var separatorView: UIView?
 
-    public var isValid: Bool = true
-    public var isEnabled: Bool = true
+    open var isValid: Bool = true
+    open var isEnabled: Bool = true
     
     public override init(frame: CGRect) {
         super.init(frame: frame)

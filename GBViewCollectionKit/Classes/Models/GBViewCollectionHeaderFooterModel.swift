@@ -21,6 +21,11 @@ open class GBViewCollectionHeaderFooterModel: Any {
         self.viewClass = viewClass
     }
     
+    public init(height: CGFloat) {
+        self.height = height
+        self.viewClass = GBBaseCollectionViewHeaderFooterView.self
+    }
+    
     open func configure(_ view: GBCollectionViewHeaderFooterView) {
         view.contentTextLabel?.text = self.title
         view.contentDetailTextLabel?.text = self.subtitle

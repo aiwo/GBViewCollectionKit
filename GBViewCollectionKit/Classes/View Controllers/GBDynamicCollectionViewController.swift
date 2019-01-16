@@ -53,7 +53,7 @@ extension GBDynamicCollectionViewController {
         }
         
         let reuseIdentifier = String(describing: viewClass)
-        let nib = UINib.init(nibName: reuseIdentifier, bundle: Bundle.main)
+        let nib = UINib(nibName: reuseIdentifier, bundle: Bundle(for: viewClass))
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
         
         self.registeredClasses.append(viewClass)

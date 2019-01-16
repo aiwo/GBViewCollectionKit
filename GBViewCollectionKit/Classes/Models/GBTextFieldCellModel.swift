@@ -21,7 +21,7 @@ open class GBTextFieldCellModel: GBBaseCellModel {
         }
     }
     
-    var text: String? {
+    public var text: String? {
         return textPrivate
     }
 
