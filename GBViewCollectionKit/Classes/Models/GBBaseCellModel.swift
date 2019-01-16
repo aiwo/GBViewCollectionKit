@@ -107,11 +107,11 @@ open class GBBaseCellModel: NSObject {
         return self.section?.dataSource?.collectionView?.cellForItem(at: indexPath) as? GBCollectionViewCell
     }
 
-    func reloadCellValidity() {
+    public func reloadCellValidity() {
         cell()?.isValid = isValid
     }
 
-    func becomeFirstResponder() {
+    open func becomeFirstResponder() {
         guard let cell = cell() as? UICollectionViewCell else {
             section?.dataSource?.nextFirstResponderModel = self
             return

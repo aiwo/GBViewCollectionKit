@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		017E413C6A5CF20E4FDD24E33260C19F /* GBLoadingViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 324C6449BDDBC1E4E9637549F6E33632 /* GBLoadingViewController.xib */; };
 		01A298EC96DA5A5A863F18D74778B4A0 /* GBSwipeableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF597967B5ECF0F0F49A27F66C678FD /* GBSwipeableCollectionViewCell.swift */; };
 		0574601062382E395CFC885D444FD9AC /* GBViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52770A0AB508B076CB06FCFF558EA1F0 /* GBViewCollectionDataSource.swift */; };
 		21EEDCD3D978394D1E664CD78B17D436 /* GBViewCollectionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9746BEF998FE61D1EF2F49B229340810 /* GBViewCollectionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,7 +22,6 @@
 		9BBA7A3E87C056FC41CA3902EA54B710 /* Pods-GBViewCollectionKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5A2357AEE249840508B0F7F7D19FEAA /* Pods-GBViewCollectionKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F95EF4628AA40F50D318876EF66039C /* Pods-GBViewCollectionKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3825DAAC47C970445E19B843ECA745DE /* Pods-GBViewCollectionKitExample-dummy.m */; };
 		C4299D6221EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */; };
-		C4299D6321EE326000B918C8 /* GBBaseCollectionViewHeaderFooterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */; };
 		C4299D6421EE326900B918C8 /* GBLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324C6449BDDBC1E4E9637549F6E33632 /* GBLoadingViewController.xib */; };
 		C4F9034CCD70603E5BC8EFFF74A8D03A /* GBBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37980EE609644A011E494E4888D218EA /* GBBaseCellModel.swift */; };
 		C51A3F7CA2C8E8FA7F8DF85768DC9BBA /* GBDynamicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFBE0264032AFF20F048EB397812DF /* GBDynamicCollectionViewController.swift */; };
@@ -465,13 +463,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4299D6321EE326000B918C8 /* GBBaseCollectionViewHeaderFooterView.xib in Sources */,
 				C4F9034CCD70603E5BC8EFFF74A8D03A /* GBBaseCellModel.swift in Sources */,
 				39CC57D5DF3FD3EA2E1042047DD6CB00 /* GBBaseCollectionViewCell.swift in Sources */,
 				EDA21C3131F97DA318E2F7C15534F59A /* GBBaseCollectionViewHeaderFooterView.swift in Sources */,
 				C51A3F7CA2C8E8FA7F8DF85768DC9BBA /* GBDynamicCollectionViewController.swift in Sources */,
 				5B0CBE2369A872D664854F82B8C70087 /* GBLoadingViewController.swift in Sources */,
-				017E413C6A5CF20E4FDD24E33260C19F /* GBLoadingViewController.xib in Sources */,
 				01A298EC96DA5A5A863F18D74778B4A0 /* GBSwipeableCollectionViewCell.swift in Sources */,
 				950C1FC01F88559B1F74CB4F1F6D2D6C /* GBTextFieldCellModel.swift in Sources */,
 				58EE6BB3B36D1D35A863FA1DD4093F91 /* GBTextFieldCollectionViewCell.swift in Sources */,
