@@ -37,6 +37,8 @@ open class GBTextFieldCellModel: GBBaseCellModel {
         self.onSetText = onSetText
 
         super.init(cellViewClass: cellViewClass)
+        
+        shouldValidate = false
     }
 
     func nextEnabledTextFieldModel() -> GBTextFieldCellModel? {
@@ -87,6 +89,8 @@ open class GBTextFieldCellModel: GBBaseCellModel {
                 return
             }
 
+            self.shouldValidate = true
+            
             self.textPrivate = textField.text
 
             self.reloadCellValidity()

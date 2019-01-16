@@ -27,6 +27,7 @@ open class GBBaseCellModel: NSObject {
         return onGetIsEnabled?() ?? true
     }
 
+    var shouldValidate: Bool = true
     var isValid: Bool {
         return onGetIsValid?() ?? true
     }
@@ -85,7 +86,9 @@ open class GBBaseCellModel: NSObject {
         }
         
         cell.separatorView?.isHidden = isLastInSection
-        cell.isValid = isValid
+        if shouldValidate {
+            cell.isValid = isValid
+        }
         cell.isEnabled = isEnabled
     }
     
