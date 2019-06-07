@@ -45,6 +45,12 @@ open class GBViewCollectionDataSource {
             collectionView.reloadSections(IndexSet(integer: index))
         }
     }
+    
+    public func reloadItems(at indexPaths: [IndexPath]) {
+        if let collectionView = self.collectionView {
+            collectionView.reloadItems(at: indexPaths)
+        }
+    }
 
 }
 
@@ -83,6 +89,20 @@ extension GBViewCollectionDataSource {
         self.collectionView?.performBatchUpdates({
             self.collectionView?.insertItems(at: [indexPath])
         }, completion: completion)
+    }
+    
+    public func delete(sectionViewOf section: GBViewCollectionSectionModel, completion: ((Bool) -> Void)?) {
+        guard let index = self.sections.index(where: { $0 === section }) else {
+            return
+        }
+        
+        self.collectionView?.performBatchUpdates({
+            self.collectionView?.deleteSections(IndexSet(integer: index))
+        }, completion: completion)
+    }
+    
+    public func performBatchUpdates(_ updates:() -> Void, completion: ((Bool) -> Void)?) {
+        self.collectionView?.performBatchUpdates(updates, completion: completion)
     }
     
 }

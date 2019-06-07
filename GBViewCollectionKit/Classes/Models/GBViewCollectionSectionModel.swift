@@ -24,17 +24,21 @@ open class GBViewCollectionSectionModel {
     }
     
     public init(items: [GBBaseCellModel]) {
-        self.add(items)
+        add(items)
     }
     
     public func add(_ item: GBBaseCellModel) {
-        self.items.append(item)
+        add(item, at: items.count)
+    }
+    
+    public func add(_ item: GBBaseCellModel, at index: Int) {
+        items.insert(item, at: index)
         item.section = self
     }
     
     public func add(_ items: [GBBaseCellModel]) {
         for item in items {
-            self.add(item)
+            add(item)
         }
     }
     
@@ -46,6 +50,12 @@ open class GBViewCollectionSectionModel {
     public func reloadCells(animated: Bool = true) {
         if let dataSource = self.dataSource, let index = dataSource.sections.index(where: { $0 === self }) {
             dataSource.reloadSection(at: index)
+        }
+    }
+    
+    public func reloadCellModel(_ cellModel: GBBaseCellModel, animated: Bool = true) {
+        if let dataSource = self.dataSource, let indexPath = cellModel.indexPath() {
+            dataSource.reloadItems(at: [indexPath])
         }
     }
     
