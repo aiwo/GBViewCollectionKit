@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GBViewCollectionKit'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'Model based configuration of collection views.'
 
   s.description      = <<-DESC
