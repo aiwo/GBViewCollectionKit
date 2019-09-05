@@ -40,42 +40,40 @@ open class GBBaseCellModel: NSObject {
     
     open weak var section: GBViewCollectionSectionModel?
     
-    open var cellHeight: CGFloat {
-        get {
-            let cellClassString = String(describing: self.cellViewClass)
-            if GBBaseCellModel.referenceCells[cellClassString] == nil {
-                guard let newReferenceView = Bundle.main.loadNibNamed(cellClassString, owner: nil, options: nil)?.first as? GBBaseCollectionViewCell else {
-                    return kDefalutCellHeight
-                }
-                GBBaseCellModel.referenceCells[cellClassString] = newReferenceView
-            }
-            
-            guard let referenceView = GBBaseCellModel.referenceCells[cellClassString] else {
-                return kDefalutCellHeight
-            }
-            
-            self.configure(referenceView)
-            
-            referenceView.setNeedsUpdateConstraints()
-            referenceView.updateConstraints()
-            
-            referenceView.frame = CGRect(x: 0, y: 0, width: 375, height: UILayoutFittingExpandedSize.height)
-            
-            referenceView.setNeedsLayout()
-            referenceView.layoutIfNeeded()
-            
-            let height = referenceView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
-
-            return height
-        }
-    }
-    
     public init(title: String? = nil, subtitle: String? = nil, onDidSelect: ((GBBaseCellModel) -> ())? = nil, onGetImage: (() -> UIImage?)? = nil, cellViewClass: GBCollectionViewCell.Type) {
         self.title = title
         self.subtitle = subtitle
         self.cellViewClass = cellViewClass
         self.onDidSelect = onDidSelect
         self.onGetImage = onGetImage
+    }
+    
+    open func cellHeight(forWidth width: CGFloat) -> CGFloat {
+        let cellClassString = String(describing: self.cellViewClass)
+        if GBBaseCellModel.referenceCells[cellClassString] == nil {
+            guard let newReferenceView = Bundle.main.loadNibNamed(cellClassString, owner: nil, options: nil)?.first as? GBBaseCollectionViewCell else {
+                return kDefalutCellHeight
+            }
+            GBBaseCellModel.referenceCells[cellClassString] = newReferenceView
+        }
+        
+        guard let referenceView = GBBaseCellModel.referenceCells[cellClassString] else {
+            return kDefalutCellHeight
+        }
+        
+        self.configure(referenceView)
+        
+        referenceView.setNeedsUpdateConstraints()
+        referenceView.updateConstraints()
+        
+        referenceView.frame = CGRect(x: 0, y: 0, width: width, height: UILayoutFittingExpandedSize.height)
+        
+        referenceView.setNeedsLayout()
+        referenceView.layoutIfNeeded()
+        
+        let height = referenceView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        
+        return height
     }
     
     open func configure(_ cell: GBCollectionViewCell) {

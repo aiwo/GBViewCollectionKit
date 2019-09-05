@@ -12,8 +12,8 @@ open class GBTextFieldCellModel: GBBaseCellModel {
 
     var placeholder: String?
 
-    var onGetText: (() -> String?)?
-    var onSetText: ((String?) -> Void)?
+    public var onGetText: (() -> String?)?
+    public var onSetText: ((String?) -> Void)?
     
     var textPrivate: String? {
         didSet {
@@ -28,6 +28,7 @@ open class GBTextFieldCellModel: GBBaseCellModel {
     var tapOutsideGestureRecognizer: UITapGestureRecognizer?
 
     public var onTextFieldShouldChangeCharacters: ((UITextField, NSRange, String) -> Bool)?
+    public var onTextFieldDidBeginEditing: ((UITextField) -> Void)?
     public var onTextFieldDidEndEditing: ((UITextField, Bool) -> Void)?
     public var onTextFieldDidChange: ((UITextField) -> Void)?
 
@@ -108,6 +109,8 @@ open class GBTextFieldCellModel: GBBaseCellModel {
             guard let self = self else {
                 return
             }
+            
+            self.onTextFieldDidBeginEditing?(textField)
 
             if self.tapOutsideGestureRecognizer == nil {
                 self.tapOutsideGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTapOutside(_:)))
