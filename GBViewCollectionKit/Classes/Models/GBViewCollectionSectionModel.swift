@@ -42,7 +42,7 @@ open class GBViewCollectionSectionModel {
         }
     }
     
-    public func remove(item: GBBaseCellModel) {
+    public func remove(_ item: GBBaseCellModel) {
         self.items = self.items.filter( { $0 !== item } )
         item.section = nil
     }

@@ -8,9 +8,6 @@
 
 import UIKit
 
-public typealias GBVoidCommand = () -> ()
-public typealias GBCellModelCommand = (GBBaseCellModel) -> ()
-
 open class GBBaseCellModel: NSObject {
     
     private let kDefalutCellHeight: CGFloat = 60.0
@@ -19,7 +16,7 @@ open class GBBaseCellModel: NSObject {
     public var subtitle: String?
     public var cellViewClass: GBCollectionViewCell.Type
     public var onGetImage: (() -> UIImage?)?
-    public var onDidSelect: ((GBBaseCellModel) -> ())?
+    public var onDidSelect: ((GBBaseCellModel) -> Void)?
     public var onGetIsEnabled: (() -> (Bool))?
     public var onGetIsValid: (() -> (Bool))?
 
@@ -40,7 +37,7 @@ open class GBBaseCellModel: NSObject {
     
     open weak var section: GBViewCollectionSectionModel?
     
-    public init(title: String? = nil, subtitle: String? = nil, onDidSelect: ((GBBaseCellModel) -> ())? = nil, onGetImage: (() -> UIImage?)? = nil, cellViewClass: GBCollectionViewCell.Type) {
+    public init(title: String? = nil, subtitle: String? = nil, onDidSelect: ((GBBaseCellModel) -> Void)? = nil, onGetImage: (() -> UIImage?)? = nil, cellViewClass: GBCollectionViewCell.Type) {
         self.title = title
         self.subtitle = subtitle
         self.cellViewClass = cellViewClass
@@ -106,6 +103,15 @@ open class GBBaseCellModel: NSObject {
         }
 
         return self.section?.dataSource?.collectionView?.cellForItem(at: indexPath) as? GBCollectionViewCell
+    }
+    
+    public func reloadCell() {
+        guard let cell = cell() else {
+            assertionFailure()
+            return
+        }
+        
+        configure(cell)
     }
 
     public func reloadCellValidity() {

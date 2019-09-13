@@ -58,13 +58,11 @@ extension GBViewCollectionDataSource {
     
     public func add(section: GBViewCollectionSectionModel) {
         self.sections.append(section)
+        section.dataSource = self
     }
     
     public func add(sections: [GBViewCollectionSectionModel]) {
-        for section in sections {
-            self.sections.append(section)
-            section.dataSource = self
-        }
+        sections.forEach({ add(section: $0) })
     }
     
     public func remove(section: GBViewCollectionSectionModel) {
@@ -101,8 +99,26 @@ extension GBViewCollectionDataSource {
         }, completion: completion)
     }
     
-    public func performBatchUpdates(_ updates:() -> Void, completion: ((Bool) -> Void)?) {
-        self.collectionView?.performBatchUpdates(updates, completion: completion)
+    
+    
+    /// Removes cell model from the data source as well as its corresponing cell
+    /// Unlike insert method, you shouldn't remove cell model from its section's
+    /// items array prior to calling this method, because the cell model needs
+    /// to still have an indexPath value
+    ///
+    /// - Parameters:
+    ///   - item: cell model to be removed
+    ///   - completion: optional completion block
+    public func delete(cellViewOf item: GBBaseCellModel, completion: ((Bool) -> Void)?) {
+        guard let indexPath = self.indexPath(ofItem: item) else {
+            assertionFailure("Cell model object not found anywhere in items array")
+            return
+        }
+        
+        self.collectionView?.performBatchUpdates({
+            item.section?.remove(item)
+            self.collectionView?.deleteItems(at: [indexPath])
+        }, completion: completion)
     }
     
 }
