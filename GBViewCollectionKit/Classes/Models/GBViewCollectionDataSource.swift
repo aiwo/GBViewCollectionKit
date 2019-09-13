@@ -99,8 +99,6 @@ extension GBViewCollectionDataSource {
         }, completion: completion)
     }
     
-    
-    
     /// Removes cell model from the data source as well as its corresponing cell
     /// Unlike insert method, you shouldn't remove cell model from its section's
     /// items array prior to calling this method, because the cell model needs
