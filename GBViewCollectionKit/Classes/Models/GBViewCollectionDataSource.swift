@@ -56,8 +56,13 @@ open class GBViewCollectionDataSource {
 
 extension GBViewCollectionDataSource {
     
-    public func add(section: GBViewCollectionSectionModel) {
-        self.sections.append(section)
+    public func add(section: GBViewCollectionSectionModel, at index: Int = -1) {
+        if index >= 0 {
+            sections.insert(section, at: index)
+        } else {
+            sections.append(section)
+        }
+        
         section.dataSource = self
     }
     
