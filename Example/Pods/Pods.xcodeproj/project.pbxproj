@@ -23,6 +23,8 @@
 		9F95EF4628AA40F50D318876EF66039C /* Pods-GBViewCollectionKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3825DAAC47C970445E19B843ECA745DE /* Pods-GBViewCollectionKitExample-dummy.m */; };
 		C4299D6221EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */; };
 		C4299D6421EE326900B918C8 /* GBLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324C6449BDDBC1E4E9637549F6E33632 /* GBLoadingViewController.xib */; };
+		C4448D47234B6143005FCBB0 /* GBBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4448D46234B6143005FCBB0 /* GBBaseTableViewCell.swift */; };
+		C4EEF5B3234B3E8900D26054 /* GBDynamicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EEF5B2234B3E8900D26054 /* GBDynamicTableViewController.swift */; };
 		C4F9034CCD70603E5BC8EFFF74A8D03A /* GBBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37980EE609644A011E494E4888D218EA /* GBBaseCellModel.swift */; };
 		C51A3F7CA2C8E8FA7F8DF85768DC9BBA /* GBDynamicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFBE0264032AFF20F048EB397812DF /* GBDynamicCollectionViewController.swift */; };
 		C8C5A4241C2E90E42C16FC588F39C709 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
@@ -91,6 +93,8 @@
 		B5A2357AEE249840508B0F7F7D19FEAA /* Pods-GBViewCollectionKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBViewCollectionKitTests-umbrella.h"; sourceTree = "<group>"; };
 		C0DD668D79575F9CE8C48A7612C840D9 /* Pods-GBViewCollectionKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GBBaseCollectionViewHeaderFooterView.xib; sourceTree = "<group>"; };
+		C4448D46234B6143005FCBB0 /* GBBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBBaseTableViewCell.swift; sourceTree = "<group>"; };
+		C4EEF5B2234B3E8900D26054 /* GBDynamicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDynamicTableViewController.swift; sourceTree = "<group>"; };
 		C5705495E2E93798EBC26246A18C066D /* Pods-GBViewCollectionKitExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitExample-frameworks.sh"; sourceTree = "<group>"; };
 		D67285E4CE2D34BBBC2805DBBA2787F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -223,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				23FFBE0264032AFF20F048EB397812DF /* GBDynamicCollectionViewController.swift */,
+				C4EEF5B2234B3E8900D26054 /* GBDynamicTableViewController.swift */,
 				0C8D67EDFED6E13CE16B7B3042E83132 /* GBLoadingViewController.swift */,
 				324C6449BDDBC1E4E9637549F6E33632 /* GBLoadingViewController.xib */,
 			);
@@ -249,6 +254,7 @@
 				C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */,
 				1DF597967B5ECF0F0F49A27F66C678FD /* GBSwipeableCollectionViewCell.swift */,
 				40E4C23E3AEACCB041FB7F540DB4D4FD /* GBTextFieldCollectionViewCell.swift */,
+				C4448D46234B6143005FCBB0 /* GBBaseTableViewCell.swift */,
 			);
 			name = Views;
 			path = GBViewCollectionKit/Classes/Views;
@@ -402,6 +408,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -469,6 +476,8 @@
 				C51A3F7CA2C8E8FA7F8DF85768DC9BBA /* GBDynamicCollectionViewController.swift in Sources */,
 				5B0CBE2369A872D664854F82B8C70087 /* GBLoadingViewController.swift in Sources */,
 				01A298EC96DA5A5A863F18D74778B4A0 /* GBSwipeableCollectionViewCell.swift in Sources */,
+				C4EEF5B3234B3E8900D26054 /* GBDynamicTableViewController.swift in Sources */,
+				C4448D47234B6143005FCBB0 /* GBBaseTableViewCell.swift in Sources */,
 				950C1FC01F88559B1F74CB4F1F6D2D6C /* GBTextFieldCellModel.swift in Sources */,
 				58EE6BB3B36D1D35A863FA1DD4093F91 /* GBTextFieldCollectionViewCell.swift in Sources */,
 				0574601062382E395CFC885D444FD9AC /* GBViewCollectionDataSource.swift in Sources */,

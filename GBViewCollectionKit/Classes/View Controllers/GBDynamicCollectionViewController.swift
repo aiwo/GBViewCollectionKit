@@ -14,7 +14,7 @@ open class GBDynamicCollectionViewController: UICollectionViewController {
     
     open var dataSource: GBViewCollectionDataSource? {
         didSet {
-            dataSource?.collectionView = collectionView
+            dataSource?.contentView = collectionView
 
             setupCommands()
 
@@ -29,6 +29,64 @@ open class GBDynamicCollectionViewController: UICollectionViewController {
 
         dataSource?.onGetIndexPathAtPoint = { (point) in
             return self.collectionView?.indexPathForItem(at: point)
+        }
+        
+        dataSource?.onInsertCellView = { (item, completion) in
+            guard let indexPath = self.dataSource?.indexPath(ofItem: item) else {
+                return
+            }
+            
+            self.collectionView?.performBatchUpdates({
+                self.collectionView?.insertItems(at: [indexPath])
+            }, completion: completion)
+        }
+        
+        dataSource?.onInsertSectionView = { (section, completion) in
+            guard let index = self.dataSource?.sections.index(where: { $0 === section }) else {
+                return
+            }
+            
+            self.collectionView?.performBatchUpdates({
+                self.collectionView?.insertSections(IndexSet(integer: index))
+            }, completion: completion)
+        }
+        
+        dataSource?.onDeleteCellView = { (item, completion) in
+            guard let indexPath = self.dataSource?.indexPath(ofItem: item) else {
+                assertionFailure("Cell model object not found anywhere in items array")
+                return
+            }
+            
+            self.collectionView?.performBatchUpdates({
+                item.section?.remove(item)
+                self.collectionView?.deleteItems(at: [indexPath])
+            }, completion: completion)
+        }
+        
+        dataSource?.onDeleteSectionView = { (section, completion) in
+            guard let index = self.dataSource?.sections.index(where: { $0 === section }) else {
+                return
+            }
+            
+            self.collectionView?.performBatchUpdates({
+                self.collectionView?.deleteSections(IndexSet(integer: index))
+            }, completion: completion)
+        }
+        
+        dataSource?.onReloadContentView = {
+            self.collectionView?.reloadData()
+        }
+        
+        dataSource?.onReloadItems = { (indexPaths) in
+            self.collectionView?.reloadItems(at: indexPaths)
+        }
+        
+        dataSource?.onReloadSection = { (index) in
+            self.collectionView?.reloadSections(IndexSet(integer: index))
+        }
+        
+        dataSource?.onGetCell = { (indexPath) in
+            return self.collectionView?.cellForItem(at: indexPath) as? GBCollectionViewCell
         }
     }
 }

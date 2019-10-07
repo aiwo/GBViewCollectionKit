@@ -101,7 +101,7 @@ open class GBTextFieldCellModel: GBBaseCellModel {
             }
             self.onTextFieldDidEndEditing?(textField, didPressReturn)
             if let tapOutsideGestureRecognizer = self.tapOutsideGestureRecognizer {
-                self.section?.dataSource?.collectionView?.removeGestureRecognizer(tapOutsideGestureRecognizer)
+                self.section?.dataSource?.contentView?.removeGestureRecognizer(tapOutsideGestureRecognizer)
             }
         }
 
@@ -121,7 +121,7 @@ open class GBTextFieldCellModel: GBBaseCellModel {
                 return
             }
 
-            self.section?.dataSource?.collectionView?.addGestureRecognizer(tapOutsideGestureRecognizer)
+            self.section?.dataSource?.contentView?.addGestureRecognizer(tapOutsideGestureRecognizer)
         }
 
         textFieldCell.onTextFieldShouldChangeCharacters = { [weak self] (textField, range, string) in
@@ -150,9 +150,9 @@ open class GBTextFieldCellModel: GBBaseCellModel {
         }
 
         textPrivate = textFieldCell.contentTextField?.text
-        section?.dataSource?.collectionView?.endEditing(true)
+        section?.dataSource?.contentView?.endEditing(true)
         if let tapOutsideGestureRecognizer = tapOutsideGestureRecognizer {
-            section?.dataSource?.collectionView?.removeGestureRecognizer(tapOutsideGestureRecognizer)
+            section?.dataSource?.contentView?.removeGestureRecognizer(tapOutsideGestureRecognizer)
         }
     }
 
@@ -166,7 +166,7 @@ extension GBTextFieldCellModel: UIGestureRecognizerDelegate {
     }
 
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        let point = touch.location(in: section?.dataSource?.collectionView)
+        let point = touch.location(in: section?.dataSource?.contentView)
         guard let indexPath = section?.dataSource?.onGetIndexPathAtPoint?(point),
             let currentIndexPath = self.indexPath() else {
             return true

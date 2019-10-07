@@ -101,8 +101,8 @@ open class GBBaseCellModel: NSObject {
         guard let indexPath = self.indexPath() else {
             return nil
         }
-
-        return self.section?.dataSource?.collectionView?.cellForItem(at: indexPath) as? GBCollectionViewCell
+        
+        return section?.dataSource?.onGetCell?(indexPath)
     }
     
     public func reloadCell() {

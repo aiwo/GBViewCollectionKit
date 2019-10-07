@@ -12,7 +12,7 @@
 		80A9567221CC4CC900BCBB58 /* TextFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A9567121CC4CC900BCBB58 /* TextFieldCollectionViewCell.swift */; };
 		80A9567421CC4CE000BCBB58 /* TextFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A9567321CC4CE000BCBB58 /* TextFieldCollectionViewCell.xib */; };
 		80BAA4A321CC455800E9EB99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAA4A221CC455800E9EB99 /* AppDelegate.swift */; };
-		80BAA4A521CC455800E9EB99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAA4A421CC455800E9EB99 /* ViewController.swift */; };
+		80BAA4A521CC455800E9EB99 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAA4A421CC455800E9EB99 /* CollectionViewController.swift */; };
 		80BAA4A821CC455800E9EB99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BAA4A621CC455800E9EB99 /* Main.storyboard */; };
 		80BAA4AA21CC455A00E9EB99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80BAA4A921CC455A00E9EB99 /* Assets.xcassets */; };
 		80BAA4AD21CC455A00E9EB99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BAA4AB21CC455A00E9EB99 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,9 @@
 		80BAA4B921CC4A6F00E9EB99 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAA4B821CC4A6F00E9EB99 /* TextFieldsViewController.swift */; };
 		80BF6C07202255D200B0951F /* GBViewCollectionKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF6C06202255D200B0951F /* GBViewCollectionKitTests.swift */; };
 		B2390B27EB24EACE9FC405AD /* Pods_GBViewCollectionKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C3015D321943AACBEFFCF7 /* Pods_GBViewCollectionKitExample.framework */; };
+		C4448D49234B6219005FCBB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4448D48234B6219005FCBB0 /* TableViewController.swift */; };
+		C4448D4C234B627E005FCBB0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4448D4B234B627E005FCBB0 /* TableViewCell.swift */; };
+		C4448D4E234B6287005FCBB0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4448D4D234B6287005FCBB0 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,7 @@
 		80A9567321CC4CE000BCBB58 /* TextFieldCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCollectionViewCell.xib; sourceTree = "<group>"; };
 		80BAA4A021CC455800E9EB99 /* GBViewCollectionKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBViewCollectionKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80BAA4A221CC455800E9EB99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80BAA4A421CC455800E9EB99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80BAA4A421CC455800E9EB99 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		80BAA4A721CC455800E9EB99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80BAA4A921CC455A00E9EB99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80BAA4AC21CC455A00E9EB99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		896ECC1933E7D32A080E404C /* Pods-GBViewCollectionKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBViewCollectionKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		981D1DF45A6547E0BA775CA5 /* Pods_GBViewCollectionKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBViewCollectionKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF83735372E16245E377071 /* Pods-GBViewCollectionKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBViewCollectionKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBViewCollectionKitTests/Pods-GBViewCollectionKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		C4448D48234B6219005FCBB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C4448D4B234B627E005FCBB0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C4448D4D234B6287005FCBB0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		D1C3015D321943AACBEFFCF7 /* Pods_GBViewCollectionKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBViewCollectionKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,7 @@
 		80BAA4B221CC47E200E9EB99 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C4448D4A234B6273005FCBB0 /* Table View Cell */,
 				80A9567021CC4CBC00BCBB58 /* Text Field Cell */,
 				80A9566D21CC4C7D00BCBB58 /* Labeled Cell */,
 			);
@@ -122,8 +129,9 @@
 		80BAA4B721CC4A5B00E9EB99 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				80BAA4A421CC455800E9EB99 /* ViewController.swift */,
+				80BAA4A421CC455800E9EB99 /* CollectionViewController.swift */,
 				80BAA4B821CC4A6F00E9EB99 /* TextFieldsViewController.swift */,
+				C4448D48234B6219005FCBB0 /* TableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -167,6 +175,15 @@
 			);
 			name = "Podspec Metadata";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C4448D4A234B6273005FCBB0 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C4448D4B234B627E005FCBB0 /* TableViewCell.swift */,
+				C4448D4D234B6287005FCBB0 /* TableViewCell.xib */,
+			);
+			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
 		F6A59EEC70697A2AA48DFC7A /* Pods */ = {
@@ -265,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80BAA4AD21CC455A00E9EB99 /* LaunchScreen.storyboard in Resources */,
+				C4448D4E234B6287005FCBB0 /* TableViewCell.xib in Resources */,
 				80BAA4AA21CC455A00E9EB99 /* Assets.xcassets in Resources */,
 				80A9566F21CC4CB200BCBB58 /* LabeledCollectionViewCell.xib in Resources */,
 				80A9567421CC4CE000BCBB58 /* TextFieldCollectionViewCell.xib in Resources */,
@@ -352,9 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				80BAA4B921CC4A6F00E9EB99 /* TextFieldsViewController.swift in Sources */,
+				C4448D49234B6219005FCBB0 /* TableViewController.swift in Sources */,
 				80BAA4B421CC47F400E9EB99 /* LabeledCollectionViewCell.swift in Sources */,
-				80BAA4A521CC455800E9EB99 /* ViewController.swift in Sources */,
+				80BAA4A521CC455800E9EB99 /* CollectionViewController.swift in Sources */,
 				80A9567221CC4CC900BCBB58 /* TextFieldCollectionViewCell.swift in Sources */,
+				C4448D4C234B627E005FCBB0 /* TableViewCell.swift in Sources */,
 				80BAA4A321CC455800E9EB99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

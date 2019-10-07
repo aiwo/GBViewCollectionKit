@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CollectionViewController.swift
 //  GBViewCollectionKitExample
 //
 //  Created by Gennady Berezovsky on 20.12.18.
@@ -8,7 +8,7 @@
 
 import GBViewCollectionKit
 
-class ViewController: GBDynamicCollectionViewController {
+class CollectionViewController: GBDynamicCollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

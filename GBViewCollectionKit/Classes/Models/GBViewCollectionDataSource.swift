@@ -10,13 +10,23 @@ import UIKit
 
 open class GBViewCollectionDataSource {
     
-    var collectionView: UICollectionView?
+    var contentView: UIView?
     open var sections = [GBViewCollectionSectionModel]()
 
     var nextFirstResponderModel: GBBaseCellModel?
 
     var onScrollToIndexPath: ((IndexPath) -> Void)?
     var onGetIndexPathAtPoint: ((CGPoint) -> IndexPath?)?
+    
+    var onReloadContentView: (() -> Void)?
+    var onReloadSection: ((Int) -> Void)?
+    var onReloadItems: (([IndexPath]) -> Void)?
+    var onGetCell: ((IndexPath) -> GBCollectionViewCell?)?
+    
+    var onInsertSectionView: ((GBViewCollectionSectionModel, ((Bool) -> ())?) -> Void)?
+    var onInsertCellView: ((GBBaseCellModel, ((Bool) -> ())?) -> Void)?
+    var onDeleteSectionView: ((GBViewCollectionSectionModel, ((Bool) -> ())?) -> Void)?
+    var onDeleteCellView: ((GBBaseCellModel, ((Bool) -> ())?) -> Void)?
     
     public init() {
         self.setupSections()
@@ -35,26 +45,20 @@ open class GBViewCollectionDataSource {
     }
     
     public func reloadContentView() {
-        if let collectionView = self.collectionView {
-            collectionView.reloadData()
-        }
+        onReloadContentView?()
     }
     
     public func reloadSection(at index: Int) {
-        if let collectionView = self.collectionView {
-            collectionView.reloadSections(IndexSet(integer: index))
-        }
+        onReloadSection?(index)
     }
     
     public func reloadItems(at indexPaths: [IndexPath]) {
-        if let collectionView = self.collectionView {
-            collectionView.reloadItems(at: indexPaths)
-        }
+        onReloadItems?(indexPaths)
     }
-
-}
-
-extension GBViewCollectionDataSource {
+    
+    public func cell(for indexPath: IndexPath) -> GBCollectionViewCell? {
+        return onGetCell?(indexPath)
+    }
     
     public func add(section: GBViewCollectionSectionModel, at index: Int = -1) {
         if index >= 0 {
@@ -75,33 +79,15 @@ extension GBViewCollectionDataSource {
     }
     
     public func insert(sectionViewOf section: GBViewCollectionSectionModel, completion: ((Bool) -> Void)?) {
-        guard let index = self.sections.index(where: { $0 === section }) else {
-            return
-        }
-        
-        self.collectionView?.performBatchUpdates({
-            self.collectionView?.insertSections(IndexSet(integer: index))
-        }, completion: completion)
+        onInsertSectionView?(section, completion)
     }
     
     public func insert(cellViewOf item: GBBaseCellModel, completion: ((Bool) -> Void)?) {
-        guard let indexPath = self.indexPath(ofItem: item) else {
-            return
-        }
-        
-        self.collectionView?.performBatchUpdates({
-            self.collectionView?.insertItems(at: [indexPath])
-        }, completion: completion)
+        onInsertCellView?(item, completion)
     }
     
     public func delete(sectionViewOf section: GBViewCollectionSectionModel, completion: ((Bool) -> Void)?) {
-        guard let index = self.sections.index(where: { $0 === section }) else {
-            return
-        }
-        
-        self.collectionView?.performBatchUpdates({
-            self.collectionView?.deleteSections(IndexSet(integer: index))
-        }, completion: completion)
+        onDeleteSectionView?(section, completion)
     }
     
     /// Removes cell model from the data source as well as its corresponing cell
@@ -113,15 +99,7 @@ extension GBViewCollectionDataSource {
     ///   - item: cell model to be removed
     ///   - completion: optional completion block
     public func delete(cellViewOf item: GBBaseCellModel, completion: ((Bool) -> Void)?) {
-        guard let indexPath = self.indexPath(ofItem: item) else {
-            assertionFailure("Cell model object not found anywhere in items array")
-            return
-        }
-        
-        self.collectionView?.performBatchUpdates({
-            item.section?.remove(item)
-            self.collectionView?.deleteItems(at: [indexPath])
-        }, completion: completion)
+        onDeleteCellView?(item, completion)
     }
     
 }
