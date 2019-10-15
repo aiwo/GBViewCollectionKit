@@ -61,8 +61,8 @@ open class GBDynamicTableViewController: UITableViewController {
                 return
             }
             
-            self.tableView?.deleteRows(at: [indexPath], with: .automatic)
             item.section?.remove(item)
+            self.tableView?.deleteRows(at: [indexPath], with: .automatic)
         }
         
         dataSource?.onDeleteSectionView = { (section, completion) in
@@ -148,6 +148,14 @@ extension GBDynamicTableViewController {
         } else {
             return UITableViewCell()
         }
+    }
+    
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let dataSource = self.dataSource, let item = dataSource.itemFrom(indexPath) else {
+            return
+        }
+        
+        item.onDidSelect?(item)
     }
     
     open override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
