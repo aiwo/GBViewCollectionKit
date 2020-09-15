@@ -16,7 +16,6 @@ class TableViewController: GBDynamicTableViewController {
         setupDataSource()
     }
     
-    
     func setupDataSource() {
         
         let items = (0..<10).map({ (_) -> GBBaseCellModel in

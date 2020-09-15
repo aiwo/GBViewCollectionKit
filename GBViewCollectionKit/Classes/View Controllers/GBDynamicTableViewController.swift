@@ -31,62 +31,62 @@ open class GBDynamicTableViewController: UITableViewController {
     }
     
     func setupCommands() {
-        dataSource?.onScrollToIndexPath = { (indexPath) in
-            self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+        dataSource?.onScrollToIndexPath = { [weak self] (indexPath) in
+            self?.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
         }
         
-        dataSource?.onGetIndexPathAtPoint = { (point) in
-            return self.tableView?.indexPathForRow(at: point)
+        dataSource?.onGetIndexPathAtPoint = { [weak self] (point) in
+            return self?.tableView?.indexPathForRow(at: point)
         }
         
-        dataSource?.onInsertCellView = { (item, completion) in
-            guard let indexPath = self.dataSource?.indexPath(ofItem: item) else {
+        dataSource?.onInsertCellView = { [weak self] (item, completion) in
+            guard let indexPath = self?.dataSource?.indexPath(ofItem: item) else {
                 return
             }
             
-            self.tableView?.insertRows(at: [indexPath], with: .automatic)
+            self?.tableView?.insertRows(at: [indexPath], with: .automatic)
         }
         
-        dataSource?.onInsertSectionView = { (section, completion) in
-            guard let index = self.dataSource?.sections.index(where: { $0 === section }) else {
+        dataSource?.onInsertSectionView = { [weak self] (section, completion) in
+            guard let index = self?.dataSource?.sections.index(where: { $0 === section }) else {
                 return
             }
             
-            self.tableView?.insertSections(IndexSet(integer: index), with: .automatic)
+            self?.tableView?.insertSections(IndexSet(integer: index), with: .automatic)
         }
         
-        dataSource?.onDeleteCellView = { (item, completion) in
-            guard let indexPath = self.dataSource?.indexPath(ofItem: item) else {
+        dataSource?.onDeleteCellView = { [weak self] (item, completion) in
+            guard let indexPath = self?.dataSource?.indexPath(ofItem: item) else {
                 assertionFailure("Cell model object not found anywhere in items array")
                 return
             }
             
             item.section?.remove(item)
-            self.tableView?.deleteRows(at: [indexPath], with: .automatic)
+            self?.tableView?.deleteRows(at: [indexPath], with: .automatic)
         }
         
-        dataSource?.onDeleteSectionView = { (section, completion) in
-            guard let index = self.dataSource?.sections.index(where: { $0 === section }) else {
+        dataSource?.onDeleteSectionView = { [weak self] (section, completion) in
+            guard let index = self?.dataSource?.sections.index(where: { $0 === section }) else {
                 return
             }
             
-            self.tableView?.deleteSections(IndexSet(integer: index), with: .automatic)
+            self?.tableView?.deleteSections(IndexSet(integer: index), with: .automatic)
         }
         
-        dataSource?.onReloadContentView = {
-            self.tableView.reloadData()
+        dataSource?.onReloadContentView = { [weak self] in
+            self?.tableView.reloadData()
         }
         
-        dataSource?.onReloadItems = { (indexPaths) in
-            self.tableView.reloadRows(at: indexPaths, with: .automatic)
+        dataSource?.onReloadItems = { [weak self] (indexPaths) in
+            self?.tableView.reloadRows(at: indexPaths, with: .automatic)
         }
         
-        dataSource?.onReloadSection = { (index) in
-            self.tableView.reloadSections(IndexSet(integer: index), with: .automatic)
+        dataSource?.onReloadSection = { [weak self] (index) in
+            self?.tableView.reloadSections(IndexSet(integer: index), with: .automatic)
         }
         
-        dataSource?.onGetCell = { (indexPath) in
-            return self.tableView?.cellForRow(at: indexPath) as? GBCollectionViewCell
+        dataSource?.onGetCell = { [weak self] (indexPath) in
+            return self?.tableView?.cellForRow(at: indexPath) as? GBCollectionViewCell
         }
     }
 }

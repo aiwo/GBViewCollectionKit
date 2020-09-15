@@ -16,7 +16,6 @@ class CollectionViewController: GBDynamicCollectionViewController {
         setupDataSource()
     }
 
-
     func setupDataSource() {
 
         let textFieldExampleCellModel = GBBaseCellModel(title: "Text Fields", subtitle: "A collection view with cells containing UITextFields", onDidSelect: { [weak self] (_) in

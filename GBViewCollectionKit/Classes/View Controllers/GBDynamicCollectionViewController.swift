@@ -23,70 +23,70 @@ open class GBDynamicCollectionViewController: UICollectionViewController {
     }
 
     func setupCommands() {
-        dataSource?.onScrollToIndexPath = { (indexPath) in
-            self.collectionView?.scrollToItem(at: indexPath, at: [], animated: true)
+        dataSource?.onScrollToIndexPath = { [weak self] (indexPath) in
+            self?.collectionView?.scrollToItem(at: indexPath, at: [], animated: true)
         }
 
-        dataSource?.onGetIndexPathAtPoint = { (point) in
-            return self.collectionView?.indexPathForItem(at: point)
+        dataSource?.onGetIndexPathAtPoint = { [weak self] (point) in
+            return self?.collectionView?.indexPathForItem(at: point)
         }
         
-        dataSource?.onInsertCellView = { (item, completion) in
-            guard let indexPath = self.dataSource?.indexPath(ofItem: item) else {
+        dataSource?.onInsertCellView = { [weak self] (item, completion) in
+            guard let indexPath = self?.dataSource?.indexPath(ofItem: item) else {
                 return
             }
             
-            self.collectionView?.performBatchUpdates({
-                self.collectionView?.insertItems(at: [indexPath])
+            self?.collectionView?.performBatchUpdates({
+                self?.collectionView?.insertItems(at: [indexPath])
             }, completion: completion)
         }
         
-        dataSource?.onInsertSectionView = { (section, completion) in
-            guard let index = self.dataSource?.sections.index(where: { $0 === section }) else {
+        dataSource?.onInsertSectionView = { [weak self] (section, completion) in
+            guard let index = self?.dataSource?.sections.index(where: { $0 === section }) else {
                 return
             }
             
-            self.collectionView?.performBatchUpdates({
-                self.collectionView?.insertSections(IndexSet(integer: index))
+            self?.collectionView?.performBatchUpdates({
+                self?.collectionView?.insertSections(IndexSet(integer: index))
             }, completion: completion)
         }
         
-        dataSource?.onDeleteCellView = { (item, completion) in
-            guard let indexPath = self.dataSource?.indexPath(ofItem: item) else {
+        dataSource?.onDeleteCellView = { [weak self] (item, completion) in
+            guard let indexPath = self?.dataSource?.indexPath(ofItem: item) else {
                 assertionFailure("Cell model object not found anywhere in items array")
                 return
             }
             
-            self.collectionView?.performBatchUpdates({
+            self?.collectionView?.performBatchUpdates({
                 item.section?.remove(item)
-                self.collectionView?.deleteItems(at: [indexPath])
+                self?.collectionView?.deleteItems(at: [indexPath])
             }, completion: completion)
         }
         
-        dataSource?.onDeleteSectionView = { (section, completion) in
-            guard let index = self.dataSource?.sections.index(where: { $0 === section }) else {
+        dataSource?.onDeleteSectionView = { [weak self] (section, completion) in
+            guard let index = self?.dataSource?.sections.index(where: { $0 === section }) else {
                 return
             }
             
-            self.collectionView?.performBatchUpdates({
-                self.collectionView?.deleteSections(IndexSet(integer: index))
+            self?.collectionView?.performBatchUpdates({
+                self?.collectionView?.deleteSections(IndexSet(integer: index))
             }, completion: completion)
         }
         
-        dataSource?.onReloadContentView = {
-            self.collectionView?.reloadData()
+        dataSource?.onReloadContentView = { [weak self] in
+            self?.collectionView?.reloadData()
         }
         
-        dataSource?.onReloadItems = { (indexPaths) in
-            self.collectionView?.reloadItems(at: indexPaths)
+        dataSource?.onReloadItems = { [weak self] (indexPaths) in
+            self?.collectionView?.reloadItems(at: indexPaths)
         }
         
-        dataSource?.onReloadSection = { (index) in
-            self.collectionView?.reloadSections(IndexSet(integer: index))
+        dataSource?.onReloadSection = { [weak self] (index) in
+            self?.collectionView?.reloadSections(IndexSet(integer: index))
         }
         
-        dataSource?.onGetCell = { (indexPath) in
-            return self.collectionView?.cellForItem(at: indexPath) as? GBCollectionViewCell
+        dataSource?.onGetCell = { [weak self] (indexPath) in
+            return self?.collectionView?.cellForItem(at: indexPath) as? GBCollectionViewCell
         }
     }
 }
