@@ -3,514 +3,574 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01A298EC96DA5A5A863F18D74778B4A0 /* GBSwipeableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF597967B5ECF0F0F49A27F66C678FD /* GBSwipeableCollectionViewCell.swift */; };
-		0574601062382E395CFC885D444FD9AC /* GBViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52770A0AB508B076CB06FCFF558EA1F0 /* GBViewCollectionDataSource.swift */; };
-		21EEDCD3D978394D1E664CD78B17D436 /* GBViewCollectionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9746BEF998FE61D1EF2F49B229340810 /* GBViewCollectionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22B25165EA7A169010768157B9988BD3 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D37D7A5B0F7540E7D0B9EC538CF29A /* UIView+Additions.swift */; };
-		24D169F1E0B620CB582639405A35A8AA /* GBViewCollectionHeaderFooterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209C1DE0846E436D55259AF4A39EDB1B /* GBViewCollectionHeaderFooterModel.swift */; };
-		39CC57D5DF3FD3EA2E1042047DD6CB00 /* GBBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC1468398C8ECB6C03DF7E956BA040 /* GBBaseCollectionViewCell.swift */; };
-		58EE6BB3B36D1D35A863FA1DD4093F91 /* GBTextFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4C23E3AEACCB041FB7F540DB4D4FD /* GBTextFieldCollectionViewCell.swift */; };
-		5B0CBE2369A872D664854F82B8C70087 /* GBLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D67EDFED6E13CE16B7B3042E83132 /* GBLoadingViewController.swift */; };
-		63F62CB81B0BC2D0B9E0B35AA24A9F72 /* GBViewCollectionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8297DAA52782415BFED7941992A11396 /* GBViewCollectionSectionModel.swift */; };
-		65F883240544BAA5E3B8E7775B5DBCAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		8A3BCBC2D4DB1A8F7F374CBCB31741C6 /* Pods-GBViewCollectionKitExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA784DF05122915CEAF661DBEDC6DA8 /* Pods-GBViewCollectionKitExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		950C1FC01F88559B1F74CB4F1F6D2D6C /* GBTextFieldCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A10219C5FB2399D1A02731ABAEE97 /* GBTextFieldCellModel.swift */; };
-		9BBA7A3E87C056FC41CA3902EA54B710 /* Pods-GBViewCollectionKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5A2357AEE249840508B0F7F7D19FEAA /* Pods-GBViewCollectionKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F95EF4628AA40F50D318876EF66039C /* Pods-GBViewCollectionKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3825DAAC47C970445E19B843ECA745DE /* Pods-GBViewCollectionKitExample-dummy.m */; };
-		C4299D6221EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */; };
-		C4299D6421EE326900B918C8 /* GBLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324C6449BDDBC1E4E9637549F6E33632 /* GBLoadingViewController.xib */; };
-		C4448D47234B6143005FCBB0 /* GBBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4448D46234B6143005FCBB0 /* GBBaseTableViewCell.swift */; };
-		C4EEF5B3234B3E8900D26054 /* GBDynamicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EEF5B2234B3E8900D26054 /* GBDynamicTableViewController.swift */; };
-		C4F9034CCD70603E5BC8EFFF74A8D03A /* GBBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37980EE609644A011E494E4888D218EA /* GBBaseCellModel.swift */; };
-		C51A3F7CA2C8E8FA7F8DF85768DC9BBA /* GBDynamicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFBE0264032AFF20F048EB397812DF /* GBDynamicCollectionViewController.swift */; };
-		C8C5A4241C2E90E42C16FC588F39C709 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		CB913352252BDF12123EF5F66D402F97 /* Pods-GBViewCollectionKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 635B7917AD594572A963417795BD44BD /* Pods-GBViewCollectionKitTests-dummy.m */; };
-		EDA21C3131F97DA318E2F7C15534F59A /* GBBaseCollectionViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD637CA746956195A5A10BD604897DB /* GBBaseCollectionViewHeaderFooterView.swift */; };
-		FE48085BC207FF304575B2AA7E026C78 /* GBViewCollectionKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCE7D2535A0425EFE24DEB982F4D463 /* GBViewCollectionKit-dummy.m */; };
-		FE966D4ACECC2716C04D89691FB7B220 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		02EBC48409416132D9B16A9EE6C88891 /* GBBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A97BF5C68AA05BBF941FC93D03E91 /* GBBaseCollectionViewCell.swift */; };
+		28A0F509141077F70D9DBC0D374E55E0 /* GBTextFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3BDF209C82399356E24571F21F657 /* GBTextFieldCollectionViewCell.swift */; };
+		29A937B63B313125928C6DCF81F55BE9 /* GBTextFieldCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9346711B18A1B096A270DA2D9CEB26 /* GBTextFieldCellModel.swift */; };
+		3692329B77EFECEEB5334E192B394D44 /* GBViewCollectionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1A8A62C75D766AA376D267C6D28E433 /* GBViewCollectionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D7700CAFD63ADE24F11D69AF798463A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3DCF8AA91149502CB5519D8A1771FC9B /* GBBaseCollectionViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDCCD5ADADB97F173E0A402AD74925F /* GBBaseCollectionViewHeaderFooterView.xib */; };
+		4700354A3BF0171A2DBD0B547108BB1B /* Pods-GBViewCollectionKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B46A5F6E9730DF9B6D6242C5EE5F123E /* Pods-GBViewCollectionKitExample-dummy.m */; };
+		4B37DF069921587D4B11541953CD515D /* GBViewCollectionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707042409960AED7E281059C111DCDF2 /* GBViewCollectionSectionModel.swift */; };
+		585E682DB6302B06C961FEA0EB2EDCA9 /* GBLoadingViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 39BFC67ECFD962ACAD140DBE44610850 /* GBLoadingViewController.xib */; };
+		637EFA5B01853A745528932A989543DF /* GBViewCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B722209890F9C084B2E37D1E6DB5F74 /* GBViewCollectionDataSource.swift */; };
+		6E4550D802721888FCC8E5BF405CBC27 /* GBBaseCollectionViewHeaderFooterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4BDCCD5ADADB97F173E0A402AD74925F /* GBBaseCollectionViewHeaderFooterView.xib */; };
+		86AC093917CC3991E7F10AA7E4364F5E /* GBDynamicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B40E6F04F10743FD13B2FD00A2847F6 /* GBDynamicCollectionViewController.swift */; };
+		89CA797523857BF7236C8A09018B732D /* GBViewCollectionHeaderFooterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0AD943D5E984AD71CC7FF80A078CE0 /* GBViewCollectionHeaderFooterModel.swift */; };
+		97214608FA10AB28366EDD3D803B7A60 /* GBBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2A9AFCAAD42BB7365233DC0DE3F3 /* GBBaseTableViewCell.swift */; };
+		99D8E204E026B4E32E834953C53135DA /* GBViewCollectionKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEEFC664718995EEE014C5CA181DB72 /* GBViewCollectionKit-dummy.m */; };
+		9D51522B1743D68CF069BAA09BD7534C /* Pods-GBViewCollectionKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1466C8F486970D95F46F423536E2B60D /* Pods-GBViewCollectionKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFCFAE10B013E0134A9999CA01675392 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C0DE374775CE20A48C28FC4F6DD1BB /* UIView+Additions.swift */; };
+		C415DFD0B92D197784813912C27BA004 /* GBDynamicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F61E4FEA2366042FC58E9F53957351 /* GBDynamicTableViewController.swift */; };
+		C6173FD7E61741312678ADBC34813944 /* GBViewCollectionKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7CF28D0D4A2B4A7C80A479434A7AB7F /* GBViewCollectionKitResources.bundle */; };
+		D45F1FDB6DA35162000822B172A8EE6C /* GBBaseCollectionViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7970AB87A75C430C714CE65338E0F /* GBBaseCollectionViewHeaderFooterView.swift */; };
+		D98EED7485531ACEB0C7E8A0A3D4A75D /* Pods-GBViewCollectionKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36472EF75DD3A986FB62A9AF7EDDC018 /* Pods-GBViewCollectionKitTests-dummy.m */; };
+		E3786F424A4090E3D6A1E65D2B2E4490 /* GBBaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538EFEB7B51A6A66B56F00D32F8AE40B /* GBBaseCellModel.swift */; };
+		E4A92AC03FC25E62298453DE7F3D96AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E4B2B3220B40B1AACB8135380DFF9DED /* Pods-GBViewCollectionKitExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A30CF8B88CE15354387600B56B4CD0 /* Pods-GBViewCollectionKitExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7B2A03DCDCB3848D6E6386E11EF9F7 /* GBLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39BFC67ECFD962ACAD140DBE44610850 /* GBLoadingViewController.xib */; };
+		FC164FAC7F520940AABF24A6C4281BFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FDDF44AED3FE3D572B2CD79782FF291C /* GBLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86F76B81B4BF0D089C70C9322D0B89A /* GBLoadingViewController.swift */; };
+		FF74137A6C2B472783393547155D27AF /* GBSwipeableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB0471D784FC32D95DF1CE9535C715 /* GBSwipeableCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3F260EC262911C45B7CB6E6806052AD2 /* PBXContainerItemProxy */ = {
+		7ED807184F353B1E695FAF764203E671 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8791E5F60A2D4C48DAB0A71A72E17A04;
+			remoteGlobalIDString = 327B440077716EBADFA5E68903606022;
+			remoteInfo = "GBViewCollectionKit-GBViewCollectionKitResources";
+		};
+		996E3FA47D4857B736A3B837AB30D375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D268EA8738EFAED81E29B67E414C163A;
 			remoteInfo = GBViewCollectionKit;
 		};
-		C57236468B4DB37A5C0E55CE69118838 /* PBXContainerItemProxy */ = {
+		D93C7DE1E624F8E768C3A65737F5D76E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 00D20263C4E03EC762950A92B61B441C;
+			remoteGlobalIDString = B12E9AAC5AEEF1963C1F43E56320A982;
 			remoteInfo = "Pods-GBViewCollectionKitExample";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C8D67EDFED6E13CE16B7B3042E83132 /* GBLoadingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBLoadingViewController.swift; sourceTree = "<group>"; };
-		177E6599999DE3C47B6291AFED02537C /* Pods-GBViewCollectionKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBViewCollectionKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1DF597967B5ECF0F0F49A27F66C678FD /* GBSwipeableCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBSwipeableCollectionViewCell.swift; sourceTree = "<group>"; };
-		209C1DE0846E436D55259AF4A39EDB1B /* GBViewCollectionHeaderFooterModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionHeaderFooterModel.swift; sourceTree = "<group>"; };
-		23FFBE0264032AFF20F048EB397812DF /* GBDynamicCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBDynamicCollectionViewController.swift; sourceTree = "<group>"; };
-		25FDB06F36CAF39BE3ECDBE09D442342 /* GBViewCollectionKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = GBViewCollectionKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2C59180B484822241A06CDE40B50C50C /* GBViewCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GBViewCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		324C6449BDDBC1E4E9637549F6E33632 /* GBLoadingViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = GBLoadingViewController.xib; sourceTree = "<group>"; };
-		37980EE609644A011E494E4888D218EA /* GBBaseCellModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCellModel.swift; sourceTree = "<group>"; };
-		3825DAAC47C970445E19B843ECA745DE /* Pods-GBViewCollectionKitExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBViewCollectionKitExample-dummy.m"; sourceTree = "<group>"; };
-		3BA784DF05122915CEAF661DBEDC6DA8 /* Pods-GBViewCollectionKitExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBViewCollectionKitExample-umbrella.h"; sourceTree = "<group>"; };
-		3CD637CA746956195A5A10BD604897DB /* GBBaseCollectionViewHeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCollectionViewHeaderFooterView.swift; sourceTree = "<group>"; };
-		40E4C23E3AEACCB041FB7F540DB4D4FD /* GBTextFieldCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBTextFieldCollectionViewCell.swift; sourceTree = "<group>"; };
-		498E5AC061CE7781D2E9C696E3FD9FAD /* Pods-GBViewCollectionKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C079E09C87B655C3CE32A244DF2FE83 /* Pods-GBViewCollectionKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitTests-frameworks.sh"; sourceTree = "<group>"; };
-		5069B7A24345DCB968782707B809DDE9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		52770A0AB508B076CB06FCFF558EA1F0 /* GBViewCollectionDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionDataSource.swift; sourceTree = "<group>"; };
-		588FBEC024EF1E4DD0D1749C6080930F /* Pods-GBViewCollectionKitExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBViewCollectionKitExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		635B7917AD594572A963417795BD44BD /* Pods-GBViewCollectionKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBViewCollectionKitTests-dummy.m"; sourceTree = "<group>"; };
-		6676D337267E22F33489A6D0952D7A60 /* Pods-GBViewCollectionKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GBViewCollectionKitTests.modulemap"; sourceTree = "<group>"; };
-		67488FA01DC88A63413C747A61F71F48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A913FE405DEC000B92712BDF99CBCFC /* GBViewCollectionKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBViewCollectionKit.xcconfig; sourceTree = "<group>"; };
-		6DCE7D2535A0425EFE24DEB982F4D463 /* GBViewCollectionKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBViewCollectionKit-dummy.m"; sourceTree = "<group>"; };
-		6E2B4983223023B475C38F51B82E1C35 /* Pods-GBViewCollectionKitExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitExample-resources.sh"; sourceTree = "<group>"; };
-		7523B28BFCA577162C3B25D1166EF55C /* Pods-GBViewCollectionKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitExample.debug.xcconfig"; sourceTree = "<group>"; };
-		769E83C73352A97BE2AF4F1464FCD4A9 /* Pods-GBViewCollectionKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GBViewCollectionKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7B8A10219C5FB2399D1A02731ABAEE97 /* GBTextFieldCellModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBTextFieldCellModel.swift; sourceTree = "<group>"; };
-		7DA8F7217A69765390555C6D74770FE2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DEEE5E150E75525D3D0BC098DEEF6BB /* Pods_GBViewCollectionKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBViewCollectionKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EB979FA420312A7281A34630FEFD324 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		8297DAA52782415BFED7941992A11396 /* GBViewCollectionSectionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionSectionModel.swift; sourceTree = "<group>"; };
-		84D8DC7399E9C14C2301C3824C9DEBC9 /* GBViewCollectionKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GBViewCollectionKit.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96A83FC42C8361FD8F23909DF6D1AFD0 /* Pods-GBViewCollectionKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitTests.release.xcconfig"; sourceTree = "<group>"; };
-		9746BEF998FE61D1EF2F49B229340810 /* GBViewCollectionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBViewCollectionKit-umbrella.h"; sourceTree = "<group>"; };
-		A688BCAE305BA541111293840C90EF44 /* Pods_GBViewCollectionKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBViewCollectionKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B052930A41E5C3C52C4DF9CB9875D1F6 /* Pods-GBViewCollectionKitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitTests-resources.sh"; sourceTree = "<group>"; };
-		B4D37D7A5B0F7540E7D0B9EC538CF29A /* UIView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
-		B5A2357AEE249840508B0F7F7D19FEAA /* Pods-GBViewCollectionKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBViewCollectionKitTests-umbrella.h"; sourceTree = "<group>"; };
-		C0DD668D79575F9CE8C48A7612C840D9 /* Pods-GBViewCollectionKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitExample.release.xcconfig"; sourceTree = "<group>"; };
-		C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GBBaseCollectionViewHeaderFooterView.xib; sourceTree = "<group>"; };
-		C4448D46234B6143005FCBB0 /* GBBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBBaseTableViewCell.swift; sourceTree = "<group>"; };
-		C4EEF5B2234B3E8900D26054 /* GBDynamicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDynamicTableViewController.swift; sourceTree = "<group>"; };
-		C5705495E2E93798EBC26246A18C066D /* Pods-GBViewCollectionKitExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitExample-frameworks.sh"; sourceTree = "<group>"; };
-		D67285E4CE2D34BBBC2805DBBA2787F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D921AF93C6CAA95B36D456F136F421A0 /* Pods-GBViewCollectionKitExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GBViewCollectionKitExample.modulemap"; sourceTree = "<group>"; };
-		DBEC1468398C8ECB6C03DF7E956BA040 /* GBBaseCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		EE34C98A87F4C367C8049DE395B979AC /* GBViewCollectionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBViewCollectionKit-prefix.pch"; sourceTree = "<group>"; };
-		F8421496E377D129C211F003C378873E /* Pods-GBViewCollectionKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GBViewCollectionKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		08D3BDF209C82399356E24571F21F657 /* GBTextFieldCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBTextFieldCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AC1C6888B9497C97FAEA363DDCE1729 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0C6FC8C89161B43D6060A3CF6CB41250 /* Pods_GBViewCollectionKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GBViewCollectionKitTests.framework; path = "Pods-GBViewCollectionKitTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCB3C598D17011647FAC8FCA091E658 /* Pods-GBViewCollectionKitExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GBViewCollectionKitExample.modulemap"; sourceTree = "<group>"; };
+		0F4FEB0533373B4F6E65B29CD3AA1C37 /* Pods_GBViewCollectionKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GBViewCollectionKitExample.framework; path = "Pods-GBViewCollectionKitExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		106A97BF5C68AA05BBF941FC93D03E91 /* GBBaseCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		1466C8F486970D95F46F423536E2B60D /* Pods-GBViewCollectionKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBViewCollectionKitTests-umbrella.h"; sourceTree = "<group>"; };
+		2B1C2A9AFCAAD42BB7365233DC0DE3F3 /* GBBaseTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseTableViewCell.swift; sourceTree = "<group>"; };
+		2E9346711B18A1B096A270DA2D9CEB26 /* GBTextFieldCellModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBTextFieldCellModel.swift; sourceTree = "<group>"; };
+		309F832C593641AAF264720C91C213B8 /* Pods-GBViewCollectionKitExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBViewCollectionKitExample-Info.plist"; sourceTree = "<group>"; };
+		36472EF75DD3A986FB62A9AF7EDDC018 /* Pods-GBViewCollectionKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBViewCollectionKitTests-dummy.m"; sourceTree = "<group>"; };
+		39BFC67ECFD962ACAD140DBE44610850 /* GBLoadingViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = GBLoadingViewController.xib; sourceTree = "<group>"; };
+		3B722209890F9C084B2E37D1E6DB5F74 /* GBViewCollectionDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionDataSource.swift; sourceTree = "<group>"; };
+		42D6B7AA12A0A847FA89874CA5799153 /* Pods-GBViewCollectionKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		49DB7C5A0A6D15FF65B24B889E77CD54 /* GBViewCollectionKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GBViewCollectionKit.modulemap; sourceTree = "<group>"; };
+		4A1113E3D1CA08DD8BB3FA3703E3EC7E /* Pods-GBViewCollectionKitExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBViewCollectionKitExample-frameworks.sh"; sourceTree = "<group>"; };
+		4BDCCD5ADADB97F173E0A402AD74925F /* GBBaseCollectionViewHeaderFooterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = GBBaseCollectionViewHeaderFooterView.xib; sourceTree = "<group>"; };
+		538EFEB7B51A6A66B56F00D32F8AE40B /* GBBaseCellModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCellModel.swift; sourceTree = "<group>"; };
+		6D241B509E99EFBD3CE8A0BE69DE5994 /* Pods-GBViewCollectionKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBViewCollectionKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		707042409960AED7E281059C111DCDF2 /* GBViewCollectionSectionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionSectionModel.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7D6C5B7A4D8D070B219CC1DDCB286DEE /* GBViewCollectionKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBViewCollectionKit.release.xcconfig; sourceTree = "<group>"; };
+		7DEF7A528B21F1B5BC26196552B193A0 /* Pods-GBViewCollectionKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GBViewCollectionKitTests.modulemap"; sourceTree = "<group>"; };
+		7EB503345B2071862B70A831E3628274 /* GBViewCollectionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBViewCollectionKit-prefix.pch"; sourceTree = "<group>"; };
+		84F88E4ED794DDE456D26907623C0509 /* Pods-GBViewCollectionKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		85526A44C12F9A0BEFC807E7CB950877 /* ResourceBundle-GBViewCollectionKitResources-GBViewCollectionKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GBViewCollectionKitResources-GBViewCollectionKit-Info.plist"; sourceTree = "<group>"; };
+		90DB0471D784FC32D95DF1CE9535C715 /* GBSwipeableCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBSwipeableCollectionViewCell.swift; sourceTree = "<group>"; };
+		93BB497ECF21A5ACCC10C24322B44809 /* GBViewCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GBViewCollectionKit.framework; path = GBViewCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F61E4FEA2366042FC58E9F53957351 /* GBDynamicTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBDynamicTableViewController.swift; sourceTree = "<group>"; };
+		9B40E6F04F10743FD13B2FD00A2847F6 /* GBDynamicCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBDynamicCollectionViewController.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A238FEF35ACFB7B73F11B47DA06F33BA /* Pods-GBViewCollectionKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		A62FC687344B85118BFD703F46927272 /* Pods-GBViewCollectionKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GBViewCollectionKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A86F76B81B4BF0D089C70C9322D0B89A /* GBLoadingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBLoadingViewController.swift; sourceTree = "<group>"; };
+		B1A8A62C75D766AA376D267C6D28E433 /* GBViewCollectionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBViewCollectionKit-umbrella.h"; sourceTree = "<group>"; };
+		B46A5F6E9730DF9B6D6242C5EE5F123E /* Pods-GBViewCollectionKitExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBViewCollectionKitExample-dummy.m"; sourceTree = "<group>"; };
+		B79D3EB52D0027AA368B282B0EB471C7 /* GBViewCollectionKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GBViewCollectionKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BFBFB556F4055622C58115305B1CD7B3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C11B185E8497DA7EDB15DE29AD8897EC /* Pods-GBViewCollectionKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBViewCollectionKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		CAEEFC664718995EEE014C5CA181DB72 /* GBViewCollectionKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBViewCollectionKit-dummy.m"; sourceTree = "<group>"; };
+		CCD19337C1B7439268CBDE79C2E20C50 /* Pods-GBViewCollectionKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GBViewCollectionKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CD2F89206831C27C5F2B79F4AC4ABFB0 /* GBViewCollectionKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBViewCollectionKit.debug.xcconfig; sourceTree = "<group>"; };
+		DD0AD943D5E984AD71CC7FF80A078CE0 /* GBViewCollectionHeaderFooterModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBViewCollectionHeaderFooterModel.swift; sourceTree = "<group>"; };
+		E0C0DE374775CE20A48C28FC4F6DD1BB /* UIView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		E7CF28D0D4A2B4A7C80A479434A7AB7F /* GBViewCollectionKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBViewCollectionKitResources.bundle; path = "GBViewCollectionKit-GBViewCollectionKitResources.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EABC94D5D3561AAA1A3C8A778E290930 /* GBViewCollectionKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GBViewCollectionKit-Info.plist"; sourceTree = "<group>"; };
+		EDBCC0FBFF2498AEC265468ACD6DE4E1 /* Pods-GBViewCollectionKitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBViewCollectionKitTests-Info.plist"; sourceTree = "<group>"; };
+		EEC7970AB87A75C430C714CE65338E0F /* GBBaseCollectionViewHeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GBBaseCollectionViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		F0A30CF8B88CE15354387600B56B4CD0 /* Pods-GBViewCollectionKitExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBViewCollectionKitExample-umbrella.h"; sourceTree = "<group>"; };
+		FF128C3908D4C14AF64381F325B91D5A /* Pods-GBViewCollectionKitExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBViewCollectionKitExample-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0FAFDDB69CE7720904FB5489B5919DE6 /* Frameworks */ = {
+		6837B552D32BBD43E39AD9100DF6958B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C5A4241C2E90E42C16FC588F39C709 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C51045F54C09840F8201A908B5F4236 /* Frameworks */ = {
+		EC30C1308C8EC2B14910F6800FDDB236 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE966D4ACECC2716C04D89691FB7B220 /* Foundation.framework in Frameworks */,
+				FC164FAC7F520940AABF24A6C4281BFD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		449AA6F926FD98A2D4C3D11749318B72 /* Frameworks */ = {
+		F0AA66CBF4AF1F4DACC9EE22B5E75DC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65F883240544BAA5E3B8E7775B5DBCAF /* Foundation.framework in Frameworks */,
+				3D7700CAFD63ADE24F11D69AF798463A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8042D990C4224700F2361A6CDE2094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4A92AC03FC25E62298453DE7F3D96AF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07C84071D70FFB03B0E06B15923BD13E /* Development Pods */ = {
+		1DF80F0A7C63F56A1F087DF606D4FAA8 /* Pods-GBViewCollectionKitExample */ = {
 			isa = PBXGroup;
 			children = (
-				4DD3F616A5B198FCEF813CB7412EF7CA /* GBViewCollectionKit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		1491EE0D4FD994D2138571F094E92DFB /* Pods-GBViewCollectionKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				7DA8F7217A69765390555C6D74770FE2 /* Info.plist */,
-				6676D337267E22F33489A6D0952D7A60 /* Pods-GBViewCollectionKitTests.modulemap */,
-				769E83C73352A97BE2AF4F1464FCD4A9 /* Pods-GBViewCollectionKitTests-acknowledgements.markdown */,
-				177E6599999DE3C47B6291AFED02537C /* Pods-GBViewCollectionKitTests-acknowledgements.plist */,
-				635B7917AD594572A963417795BD44BD /* Pods-GBViewCollectionKitTests-dummy.m */,
-				4C079E09C87B655C3CE32A244DF2FE83 /* Pods-GBViewCollectionKitTests-frameworks.sh */,
-				B052930A41E5C3C52C4DF9CB9875D1F6 /* Pods-GBViewCollectionKitTests-resources.sh */,
-				B5A2357AEE249840508B0F7F7D19FEAA /* Pods-GBViewCollectionKitTests-umbrella.h */,
-				498E5AC061CE7781D2E9C696E3FD9FAD /* Pods-GBViewCollectionKitTests.debug.xcconfig */,
-				96A83FC42C8361FD8F23909DF6D1AFD0 /* Pods-GBViewCollectionKitTests.release.xcconfig */,
-			);
-			name = "Pods-GBViewCollectionKitTests";
-			path = "Target Support Files/Pods-GBViewCollectionKitTests";
-			sourceTree = "<group>";
-		};
-		3F577F9D971693DE36020799B67549EE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2C59180B484822241A06CDE40B50C50C /* GBViewCollectionKit.framework */,
-				7DEEE5E150E75525D3D0BC098DEEF6BB /* Pods_GBViewCollectionKitExample.framework */,
-				A688BCAE305BA541111293840C90EF44 /* Pods_GBViewCollectionKitTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		43016849D4DAC8E9A8AB3CB7A922175E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				25FDB06F36CAF39BE3ECDBE09D442342 /* GBViewCollectionKit.podspec */,
-				7EB979FA420312A7281A34630FEFD324 /* LICENSE */,
-				5069B7A24345DCB968782707B809DDE9 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		44D5347904CF754D6785B84253F2574A /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4DD3F616A5B198FCEF813CB7412EF7CA /* GBViewCollectionKit */ = {
-			isa = PBXGroup;
-			children = (
-				AC80BAD74EFED13B88D380C722D83F75 /* Categories */,
-				DED47CFB32907B8B6EB48EE7CF65257F /* Models */,
-				43016849D4DAC8E9A8AB3CB7A922175E /* Pod */,
-				5AD0F2354E9D72BBD02BB9618815A935 /* Support Files */,
-				5B6EAE2F43DB1BF978F339AF60224644 /* View Controllers */,
-				8674121B98E4E1F3C5F5ADEC80CD1565 /* Views */,
-			);
-			name = GBViewCollectionKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		588D240052E2689CDA826B3391B6762F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F1EBE94EE763A53881B15BB8C35B041D /* Pods-GBViewCollectionKitExample */,
-				1491EE0D4FD994D2138571F094E92DFB /* Pods-GBViewCollectionKitTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5AD0F2354E9D72BBD02BB9618815A935 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				84D8DC7399E9C14C2301C3824C9DEBC9 /* GBViewCollectionKit.modulemap */,
-				6A913FE405DEC000B92712BDF99CBCFC /* GBViewCollectionKit.xcconfig */,
-				6DCE7D2535A0425EFE24DEB982F4D463 /* GBViewCollectionKit-dummy.m */,
-				EE34C98A87F4C367C8049DE395B979AC /* GBViewCollectionKit-prefix.pch */,
-				9746BEF998FE61D1EF2F49B229340810 /* GBViewCollectionKit-umbrella.h */,
-				67488FA01DC88A63413C747A61F71F48 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GBViewCollectionKit";
-			sourceTree = "<group>";
-		};
-		5B6EAE2F43DB1BF978F339AF60224644 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				23FFBE0264032AFF20F048EB397812DF /* GBDynamicCollectionViewController.swift */,
-				C4EEF5B2234B3E8900D26054 /* GBDynamicTableViewController.swift */,
-				0C8D67EDFED6E13CE16B7B3042E83132 /* GBLoadingViewController.swift */,
-				324C6449BDDBC1E4E9637549F6E33632 /* GBLoadingViewController.xib */,
-			);
-			name = "View Controllers";
-			path = "GBViewCollectionKit/Classes/View Controllers";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				07C84071D70FFB03B0E06B15923BD13E /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3F577F9D971693DE36020799B67549EE /* Products */,
-				588D240052E2689CDA826B3391B6762F /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8674121B98E4E1F3C5F5ADEC80CD1565 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DBEC1468398C8ECB6C03DF7E956BA040 /* GBBaseCollectionViewCell.swift */,
-				3CD637CA746956195A5A10BD604897DB /* GBBaseCollectionViewHeaderFooterView.swift */,
-				C4299D6121EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib */,
-				1DF597967B5ECF0F0F49A27F66C678FD /* GBSwipeableCollectionViewCell.swift */,
-				40E4C23E3AEACCB041FB7F540DB4D4FD /* GBTextFieldCollectionViewCell.swift */,
-				C4448D46234B6143005FCBB0 /* GBBaseTableViewCell.swift */,
-			);
-			name = Views;
-			path = GBViewCollectionKit/Classes/Views;
-			sourceTree = "<group>";
-		};
-		AC80BAD74EFED13B88D380C722D83F75 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				B4D37D7A5B0F7540E7D0B9EC538CF29A /* UIView+Additions.swift */,
-			);
-			name = Categories;
-			path = GBViewCollectionKit/Classes/Categories;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				44D5347904CF754D6785B84253F2574A /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DED47CFB32907B8B6EB48EE7CF65257F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				37980EE609644A011E494E4888D218EA /* GBBaseCellModel.swift */,
-				7B8A10219C5FB2399D1A02731ABAEE97 /* GBTextFieldCellModel.swift */,
-				52770A0AB508B076CB06FCFF558EA1F0 /* GBViewCollectionDataSource.swift */,
-				209C1DE0846E436D55259AF4A39EDB1B /* GBViewCollectionHeaderFooterModel.swift */,
-				8297DAA52782415BFED7941992A11396 /* GBViewCollectionSectionModel.swift */,
-			);
-			name = Models;
-			path = GBViewCollectionKit/Classes/Models;
-			sourceTree = "<group>";
-		};
-		F1EBE94EE763A53881B15BB8C35B041D /* Pods-GBViewCollectionKitExample */ = {
-			isa = PBXGroup;
-			children = (
-				D67285E4CE2D34BBBC2805DBBA2787F9 /* Info.plist */,
-				D921AF93C6CAA95B36D456F136F421A0 /* Pods-GBViewCollectionKitExample.modulemap */,
-				F8421496E377D129C211F003C378873E /* Pods-GBViewCollectionKitExample-acknowledgements.markdown */,
-				588FBEC024EF1E4DD0D1749C6080930F /* Pods-GBViewCollectionKitExample-acknowledgements.plist */,
-				3825DAAC47C970445E19B843ECA745DE /* Pods-GBViewCollectionKitExample-dummy.m */,
-				C5705495E2E93798EBC26246A18C066D /* Pods-GBViewCollectionKitExample-frameworks.sh */,
-				6E2B4983223023B475C38F51B82E1C35 /* Pods-GBViewCollectionKitExample-resources.sh */,
-				3BA784DF05122915CEAF661DBEDC6DA8 /* Pods-GBViewCollectionKitExample-umbrella.h */,
-				7523B28BFCA577162C3B25D1166EF55C /* Pods-GBViewCollectionKitExample.debug.xcconfig */,
-				C0DD668D79575F9CE8C48A7612C840D9 /* Pods-GBViewCollectionKitExample.release.xcconfig */,
+				0CCB3C598D17011647FAC8FCA091E658 /* Pods-GBViewCollectionKitExample.modulemap */,
+				CCD19337C1B7439268CBDE79C2E20C50 /* Pods-GBViewCollectionKitExample-acknowledgements.markdown */,
+				FF128C3908D4C14AF64381F325B91D5A /* Pods-GBViewCollectionKitExample-acknowledgements.plist */,
+				B46A5F6E9730DF9B6D6242C5EE5F123E /* Pods-GBViewCollectionKitExample-dummy.m */,
+				4A1113E3D1CA08DD8BB3FA3703E3EC7E /* Pods-GBViewCollectionKitExample-frameworks.sh */,
+				309F832C593641AAF264720C91C213B8 /* Pods-GBViewCollectionKitExample-Info.plist */,
+				F0A30CF8B88CE15354387600B56B4CD0 /* Pods-GBViewCollectionKitExample-umbrella.h */,
+				42D6B7AA12A0A847FA89874CA5799153 /* Pods-GBViewCollectionKitExample.debug.xcconfig */,
+				C11B185E8497DA7EDB15DE29AD8897EC /* Pods-GBViewCollectionKitExample.release.xcconfig */,
 			);
 			name = "Pods-GBViewCollectionKitExample";
 			path = "Target Support Files/Pods-GBViewCollectionKitExample";
 			sourceTree = "<group>";
 		};
+		230E2E2AE9B1D28A19B2AFA38C6B24B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				538EFEB7B51A6A66B56F00D32F8AE40B /* GBBaseCellModel.swift */,
+				2E9346711B18A1B096A270DA2D9CEB26 /* GBTextFieldCellModel.swift */,
+				3B722209890F9C084B2E37D1E6DB5F74 /* GBViewCollectionDataSource.swift */,
+				DD0AD943D5E984AD71CC7FF80A078CE0 /* GBViewCollectionHeaderFooterModel.swift */,
+				707042409960AED7E281059C111DCDF2 /* GBViewCollectionSectionModel.swift */,
+			);
+			name = Models;
+			path = GBViewCollectionKit/Classes/Models;
+			sourceTree = "<group>";
+		};
+		478EDD34CD7B7186F867FDEC129893A5 /* GBViewCollectionKit */ = {
+			isa = PBXGroup;
+			children = (
+				B3C57C908A1462D79BB0AFDFBDE339D7 /* Categories */,
+				230E2E2AE9B1D28A19B2AFA38C6B24B1 /* Models */,
+				94FA354C08C462FA4122165E7B4281C7 /* Pod */,
+				BB9C284D27676CB6541324A1B034F912 /* Support Files */,
+				E0783F5ACEAB832EE984E7732815AF15 /* View Controllers */,
+				F6D3AEA50A6B31DACFE6C66CCF90BD7D /* Views */,
+			);
+			name = GBViewCollectionKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		94FA354C08C462FA4122165E7B4281C7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B79D3EB52D0027AA368B282B0EB471C7 /* GBViewCollectionKit.podspec */,
+				BFBFB556F4055622C58115305B1CD7B3 /* LICENSE */,
+				0AC1C6888B9497C97FAEA363DDCE1729 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9CCA34319BE2C8F0CA6C0A3118CF22CA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DF80F0A7C63F56A1F087DF606D4FAA8 /* Pods-GBViewCollectionKitExample */,
+				D4C11BA4C576C98F903251979482D327 /* Pods-GBViewCollectionKitTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B3C57C908A1462D79BB0AFDFBDE339D7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E0C0DE374775CE20A48C28FC4F6DD1BB /* UIView+Additions.swift */,
+			);
+			name = Categories;
+			path = GBViewCollectionKit/Classes/Categories;
+			sourceTree = "<group>";
+		};
+		BB9C284D27676CB6541324A1B034F912 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				49DB7C5A0A6D15FF65B24B889E77CD54 /* GBViewCollectionKit.modulemap */,
+				CAEEFC664718995EEE014C5CA181DB72 /* GBViewCollectionKit-dummy.m */,
+				EABC94D5D3561AAA1A3C8A778E290930 /* GBViewCollectionKit-Info.plist */,
+				7EB503345B2071862B70A831E3628274 /* GBViewCollectionKit-prefix.pch */,
+				B1A8A62C75D766AA376D267C6D28E433 /* GBViewCollectionKit-umbrella.h */,
+				CD2F89206831C27C5F2B79F4AC4ABFB0 /* GBViewCollectionKit.debug.xcconfig */,
+				7D6C5B7A4D8D070B219CC1DDCB286DEE /* GBViewCollectionKit.release.xcconfig */,
+				85526A44C12F9A0BEFC807E7CB950877 /* ResourceBundle-GBViewCollectionKitResources-GBViewCollectionKit-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GBViewCollectionKit";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D4E452CF147C0ACDAB9AC4307641E3E4 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				DF094862FE302B7F0E114608844AC062 /* Products */,
+				9CCA34319BE2C8F0CA6C0A3118CF22CA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4C11BA4C576C98F903251979482D327 /* Pods-GBViewCollectionKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DEF7A528B21F1B5BC26196552B193A0 /* Pods-GBViewCollectionKitTests.modulemap */,
+				A62FC687344B85118BFD703F46927272 /* Pods-GBViewCollectionKitTests-acknowledgements.markdown */,
+				6D241B509E99EFBD3CE8A0BE69DE5994 /* Pods-GBViewCollectionKitTests-acknowledgements.plist */,
+				36472EF75DD3A986FB62A9AF7EDDC018 /* Pods-GBViewCollectionKitTests-dummy.m */,
+				EDBCC0FBFF2498AEC265468ACD6DE4E1 /* Pods-GBViewCollectionKitTests-Info.plist */,
+				1466C8F486970D95F46F423536E2B60D /* Pods-GBViewCollectionKitTests-umbrella.h */,
+				84F88E4ED794DDE456D26907623C0509 /* Pods-GBViewCollectionKitTests.debug.xcconfig */,
+				A238FEF35ACFB7B73F11B47DA06F33BA /* Pods-GBViewCollectionKitTests.release.xcconfig */,
+			);
+			name = "Pods-GBViewCollectionKitTests";
+			path = "Target Support Files/Pods-GBViewCollectionKitTests";
+			sourceTree = "<group>";
+		};
+		D4E452CF147C0ACDAB9AC4307641E3E4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				478EDD34CD7B7186F867FDEC129893A5 /* GBViewCollectionKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DF094862FE302B7F0E114608844AC062 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93BB497ECF21A5ACCC10C24322B44809 /* GBViewCollectionKit.framework */,
+				E7CF28D0D4A2B4A7C80A479434A7AB7F /* GBViewCollectionKitResources.bundle */,
+				0F4FEB0533373B4F6E65B29CD3AA1C37 /* Pods_GBViewCollectionKitExample.framework */,
+				0C6FC8C89161B43D6060A3CF6CB41250 /* Pods_GBViewCollectionKitTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0783F5ACEAB832EE984E7732815AF15 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B40E6F04F10743FD13B2FD00A2847F6 /* GBDynamicCollectionViewController.swift */,
+				96F61E4FEA2366042FC58E9F53957351 /* GBDynamicTableViewController.swift */,
+				A86F76B81B4BF0D089C70C9322D0B89A /* GBLoadingViewController.swift */,
+				39BFC67ECFD962ACAD140DBE44610850 /* GBLoadingViewController.xib */,
+			);
+			name = "View Controllers";
+			path = "GBViewCollectionKit/Classes/View Controllers";
+			sourceTree = "<group>";
+		};
+		F6D3AEA50A6B31DACFE6C66CCF90BD7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				106A97BF5C68AA05BBF941FC93D03E91 /* GBBaseCollectionViewCell.swift */,
+				EEC7970AB87A75C430C714CE65338E0F /* GBBaseCollectionViewHeaderFooterView.swift */,
+				4BDCCD5ADADB97F173E0A402AD74925F /* GBBaseCollectionViewHeaderFooterView.xib */,
+				2B1C2A9AFCAAD42BB7365233DC0DE3F3 /* GBBaseTableViewCell.swift */,
+				90DB0471D784FC32D95DF1CE9535C715 /* GBSwipeableCollectionViewCell.swift */,
+				08D3BDF209C82399356E24571F21F657 /* GBTextFieldCollectionViewCell.swift */,
+			);
+			name = Views;
+			path = GBViewCollectionKit/Classes/Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		05FE3EF72C88B663B9CA62846C0F2DD0 /* Headers */ = {
+		2646BAB2FD807DAA629377E8E96D3CB2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BBA7A3E87C056FC41CA3902EA54B710 /* Pods-GBViewCollectionKitTests-umbrella.h in Headers */,
+				3692329B77EFECEEB5334E192B394D44 /* GBViewCollectionKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8535A159D02AEA59D6DA017ED51BFA20 /* Headers */ = {
+		4FB107F2D8E282DF3357CC6F5F049C60 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A3BCBC2D4DB1A8F7F374CBCB31741C6 /* Pods-GBViewCollectionKitExample-umbrella.h in Headers */,
+				E4B2B3220B40B1AACB8135380DFF9DED /* Pods-GBViewCollectionKitExample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED4CA35726DA2350E84EA7C1BD558368 /* Headers */ = {
+		A30289D2C5F2EC49A5E686CDDF2D5CC4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21EEDCD3D978394D1E664CD78B17D436 /* GBViewCollectionKit-umbrella.h in Headers */,
+				9D51522B1743D68CF069BAA09BD7534C /* Pods-GBViewCollectionKitTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		00D20263C4E03EC762950A92B61B441C /* Pods-GBViewCollectionKitExample */ = {
+		327B440077716EBADFA5E68903606022 /* GBViewCollectionKit-GBViewCollectionKitResources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F6998ED0A36FB63B9491EC65A8C2B79 /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitExample" */;
+			buildConfigurationList = 3A5CEE543BD65B23B6DA5A8C47693692 /* Build configuration list for PBXNativeTarget "GBViewCollectionKit-GBViewCollectionKitResources" */;
 			buildPhases = (
-				8535A159D02AEA59D6DA017ED51BFA20 /* Headers */,
-				735B9EE5E20B65CD69E035B166C3EB40 /* Sources */,
-				0FAFDDB69CE7720904FB5489B5919DE6 /* Frameworks */,
-				246371FB29BE73BE37C1681C341B1ADB /* Resources */,
+				F05B306D30D5D88C5CFAA4742FE3E8A9 /* Sources */,
+				6837B552D32BBD43E39AD9100DF6958B /* Frameworks */,
+				C69D5C76EC62BEA143D631137CB3466F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				321C257D10E97022C20420EFF6B8362E /* PBXTargetDependency */,
 			);
-			name = "Pods-GBViewCollectionKitExample";
-			productName = "Pods-GBViewCollectionKitExample";
-			productReference = 7DEEE5E150E75525D3D0BC098DEEF6BB /* Pods_GBViewCollectionKitExample.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "GBViewCollectionKit-GBViewCollectionKitResources";
+			productName = "GBViewCollectionKit-GBViewCollectionKitResources";
+			productReference = E7CF28D0D4A2B4A7C80A479434A7AB7F /* GBViewCollectionKitResources.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
-		73B7D72D917240E3BB6898DE835EC4E0 /* Pods-GBViewCollectionKitTests */ = {
+		899E4FB40EC660919270F1C6004AF526 /* Pods-GBViewCollectionKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19FF8DC7CFA3C040774AEC4BCC4EB295 /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitTests" */;
+			buildConfigurationList = 15D9FA75D31A52CAB9255EC7376F2C0B /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitTests" */;
 			buildPhases = (
-				05FE3EF72C88B663B9CA62846C0F2DD0 /* Headers */,
-				6AC7D5E65A257571186E67A4D3ECE10D /* Sources */,
-				449AA6F926FD98A2D4C3D11749318B72 /* Frameworks */,
-				654EECA7BDBE79D14FBE4A3CA3A9722B /* Resources */,
+				A30289D2C5F2EC49A5E686CDDF2D5CC4 /* Headers */,
+				BABD29320A269B6155D027D82BA1AA9D /* Sources */,
+				FF8042D990C4224700F2361A6CDE2094 /* Frameworks */,
+				D88455CB19918B8C8747257498B09F1A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE8C4CE9BD7EB3551776D178E6C44A25 /* PBXTargetDependency */,
+				666AB2F9E67D44862751EDA7317F43E1 /* PBXTargetDependency */,
 			);
 			name = "Pods-GBViewCollectionKitTests";
 			productName = "Pods-GBViewCollectionKitTests";
-			productReference = A688BCAE305BA541111293840C90EF44 /* Pods_GBViewCollectionKitTests.framework */;
+			productReference = 0C6FC8C89161B43D6060A3CF6CB41250 /* Pods_GBViewCollectionKitTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8791E5F60A2D4C48DAB0A71A72E17A04 /* GBViewCollectionKit */ = {
+		B12E9AAC5AEEF1963C1F43E56320A982 /* Pods-GBViewCollectionKitExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8FAF9511065A95B764F92A3B14B3E80 /* Build configuration list for PBXNativeTarget "GBViewCollectionKit" */;
+			buildConfigurationList = 213CC68262D7B772CCA33FFF410A7D52 /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitExample" */;
 			buildPhases = (
-				ED4CA35726DA2350E84EA7C1BD558368 /* Headers */,
-				C0D5555994DDA01F70582492F8D5E2C5 /* Sources */,
-				2C51045F54C09840F8201A908B5F4236 /* Frameworks */,
-				14EA39480327B857C9576217720984A5 /* Resources */,
+				4FB107F2D8E282DF3357CC6F5F049C60 /* Headers */,
+				7DFECB4491C7B0B22648903B077860C6 /* Sources */,
+				F0AA66CBF4AF1F4DACC9EE22B5E75DC2 /* Frameworks */,
+				0B1C39B8312602AF2C49C1E96ABB7112 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				22EB412D7D318B9CD36160775EE754E3 /* PBXTargetDependency */,
+			);
+			name = "Pods-GBViewCollectionKitExample";
+			productName = "Pods-GBViewCollectionKitExample";
+			productReference = 0F4FEB0533373B4F6E65B29CD3AA1C37 /* Pods_GBViewCollectionKitExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D268EA8738EFAED81E29B67E414C163A /* GBViewCollectionKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A90AAAFB1A47144AA5B4C076A7B75F3 /* Build configuration list for PBXNativeTarget "GBViewCollectionKit" */;
+			buildPhases = (
+				2646BAB2FD807DAA629377E8E96D3CB2 /* Headers */,
+				C1630311250D47D34FEF84C9C5C37911 /* Sources */,
+				EC30C1308C8EC2B14910F6800FDDB236 /* Frameworks */,
+				F398D1FFE76175FA10F440E83EE1BF42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F48FE21A03CBDBD95DF7AB03117AD323 /* PBXTargetDependency */,
 			);
 			name = GBViewCollectionKit;
 			productName = GBViewCollectionKit;
-			productReference = 2C59180B484822241A06CDE40B50C50C /* GBViewCollectionKit.framework */;
+			productReference = 93BB497ECF21A5ACCC10C24322B44809 /* GBViewCollectionKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3F577F9D971693DE36020799B67549EE /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = DF094862FE302B7F0E114608844AC062 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8791E5F60A2D4C48DAB0A71A72E17A04 /* GBViewCollectionKit */,
-				00D20263C4E03EC762950A92B61B441C /* Pods-GBViewCollectionKitExample */,
-				73B7D72D917240E3BB6898DE835EC4E0 /* Pods-GBViewCollectionKitTests */,
+				D268EA8738EFAED81E29B67E414C163A /* GBViewCollectionKit */,
+				327B440077716EBADFA5E68903606022 /* GBViewCollectionKit-GBViewCollectionKitResources */,
+				B12E9AAC5AEEF1963C1F43E56320A982 /* Pods-GBViewCollectionKitExample */,
+				899E4FB40EC660919270F1C6004AF526 /* Pods-GBViewCollectionKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		14EA39480327B857C9576217720984A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4299D6421EE326900B918C8 /* GBLoadingViewController.xib in Resources */,
-				C4299D6221EE316300B918C8 /* GBBaseCollectionViewHeaderFooterView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		246371FB29BE73BE37C1681C341B1ADB /* Resources */ = {
+		0B1C39B8312602AF2C49C1E96ABB7112 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		654EECA7BDBE79D14FBE4A3CA3A9722B /* Resources */ = {
+		C69D5C76EC62BEA143D631137CB3466F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCF8AA91149502CB5519D8A1771FC9B /* GBBaseCollectionViewHeaderFooterView.xib in Resources */,
+				EA7B2A03DCDCB3848D6E6386E11EF9F7 /* GBLoadingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88455CB19918B8C8747257498B09F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F398D1FFE76175FA10F440E83EE1BF42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6173FD7E61741312678ADBC34813944 /* GBViewCollectionKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6AC7D5E65A257571186E67A4D3ECE10D /* Sources */ = {
+		7DFECB4491C7B0B22648903B077860C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB913352252BDF12123EF5F66D402F97 /* Pods-GBViewCollectionKitTests-dummy.m in Sources */,
+				4700354A3BF0171A2DBD0B547108BB1B /* Pods-GBViewCollectionKitExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		735B9EE5E20B65CD69E035B166C3EB40 /* Sources */ = {
+		BABD29320A269B6155D027D82BA1AA9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F95EF4628AA40F50D318876EF66039C /* Pods-GBViewCollectionKitExample-dummy.m in Sources */,
+				D98EED7485531ACEB0C7E8A0A3D4A75D /* Pods-GBViewCollectionKitTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0D5555994DDA01F70582492F8D5E2C5 /* Sources */ = {
+		C1630311250D47D34FEF84C9C5C37911 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F9034CCD70603E5BC8EFFF74A8D03A /* GBBaseCellModel.swift in Sources */,
-				39CC57D5DF3FD3EA2E1042047DD6CB00 /* GBBaseCollectionViewCell.swift in Sources */,
-				EDA21C3131F97DA318E2F7C15534F59A /* GBBaseCollectionViewHeaderFooterView.swift in Sources */,
-				C51A3F7CA2C8E8FA7F8DF85768DC9BBA /* GBDynamicCollectionViewController.swift in Sources */,
-				5B0CBE2369A872D664854F82B8C70087 /* GBLoadingViewController.swift in Sources */,
-				01A298EC96DA5A5A863F18D74778B4A0 /* GBSwipeableCollectionViewCell.swift in Sources */,
-				C4EEF5B3234B3E8900D26054 /* GBDynamicTableViewController.swift in Sources */,
-				C4448D47234B6143005FCBB0 /* GBBaseTableViewCell.swift in Sources */,
-				950C1FC01F88559B1F74CB4F1F6D2D6C /* GBTextFieldCellModel.swift in Sources */,
-				58EE6BB3B36D1D35A863FA1DD4093F91 /* GBTextFieldCollectionViewCell.swift in Sources */,
-				0574601062382E395CFC885D444FD9AC /* GBViewCollectionDataSource.swift in Sources */,
-				24D169F1E0B620CB582639405A35A8AA /* GBViewCollectionHeaderFooterModel.swift in Sources */,
-				FE48085BC207FF304575B2AA7E026C78 /* GBViewCollectionKit-dummy.m in Sources */,
-				63F62CB81B0BC2D0B9E0B35AA24A9F72 /* GBViewCollectionSectionModel.swift in Sources */,
-				22B25165EA7A169010768157B9988BD3 /* UIView+Additions.swift in Sources */,
+				E3786F424A4090E3D6A1E65D2B2E4490 /* GBBaseCellModel.swift in Sources */,
+				02EBC48409416132D9B16A9EE6C88891 /* GBBaseCollectionViewCell.swift in Sources */,
+				D45F1FDB6DA35162000822B172A8EE6C /* GBBaseCollectionViewHeaderFooterView.swift in Sources */,
+				6E4550D802721888FCC8E5BF405CBC27 /* GBBaseCollectionViewHeaderFooterView.xib in Sources */,
+				97214608FA10AB28366EDD3D803B7A60 /* GBBaseTableViewCell.swift in Sources */,
+				86AC093917CC3991E7F10AA7E4364F5E /* GBDynamicCollectionViewController.swift in Sources */,
+				C415DFD0B92D197784813912C27BA004 /* GBDynamicTableViewController.swift in Sources */,
+				FDDF44AED3FE3D572B2CD79782FF291C /* GBLoadingViewController.swift in Sources */,
+				585E682DB6302B06C961FEA0EB2EDCA9 /* GBLoadingViewController.xib in Sources */,
+				FF74137A6C2B472783393547155D27AF /* GBSwipeableCollectionViewCell.swift in Sources */,
+				29A937B63B313125928C6DCF81F55BE9 /* GBTextFieldCellModel.swift in Sources */,
+				28A0F509141077F70D9DBC0D374E55E0 /* GBTextFieldCollectionViewCell.swift in Sources */,
+				637EFA5B01853A745528932A989543DF /* GBViewCollectionDataSource.swift in Sources */,
+				89CA797523857BF7236C8A09018B732D /* GBViewCollectionHeaderFooterModel.swift in Sources */,
+				99D8E204E026B4E32E834953C53135DA /* GBViewCollectionKit-dummy.m in Sources */,
+				4B37DF069921587D4B11541953CD515D /* GBViewCollectionSectionModel.swift in Sources */,
+				AFCFAE10B013E0134A9999CA01675392 /* UIView+Additions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F05B306D30D5D88C5CFAA4742FE3E8A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		321C257D10E97022C20420EFF6B8362E /* PBXTargetDependency */ = {
+		22EB412D7D318B9CD36160775EE754E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GBViewCollectionKit;
-			target = 8791E5F60A2D4C48DAB0A71A72E17A04 /* GBViewCollectionKit */;
-			targetProxy = 3F260EC262911C45B7CB6E6806052AD2 /* PBXContainerItemProxy */;
+			target = D268EA8738EFAED81E29B67E414C163A /* GBViewCollectionKit */;
+			targetProxy = 996E3FA47D4857B736A3B837AB30D375 /* PBXContainerItemProxy */;
 		};
-		AE8C4CE9BD7EB3551776D178E6C44A25 /* PBXTargetDependency */ = {
+		666AB2F9E67D44862751EDA7317F43E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GBViewCollectionKitExample";
-			target = 00D20263C4E03EC762950A92B61B441C /* Pods-GBViewCollectionKitExample */;
-			targetProxy = C57236468B4DB37A5C0E55CE69118838 /* PBXContainerItemProxy */;
+			target = B12E9AAC5AEEF1963C1F43E56320A982 /* Pods-GBViewCollectionKitExample */;
+			targetProxy = D93C7DE1E624F8E768C3A65737F5D76E /* PBXContainerItemProxy */;
+		};
+		F48FE21A03CBDBD95DF7AB03117AD323 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GBViewCollectionKit-GBViewCollectionKitResources";
+			target = 327B440077716EBADFA5E68903606022 /* GBViewCollectionKit-GBViewCollectionKitResources */;
+			targetProxy = 7ED807184F353B1E695FAF764203E671 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		243B54421B97715AD37985E9B4D961A5 /* Release */ = {
+		18A3E1C9D595C0401402CBE8B4ED76DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A913FE405DEC000B92712BDF99CBCFC /* GBViewCollectionKit.xcconfig */;
+			baseConfigurationReference = 7D6C5B7A4D8D070B219CC1DDCB286DEE /* GBViewCollectionKit.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -520,9 +580,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GBViewCollectionKit/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit.modulemap";
 				PRODUCT_MODULE_NAME = GBViewCollectionKit;
@@ -530,7 +590,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -538,78 +598,27 @@
 			};
 			name = Release;
 		};
-		28F7761D90E343486ABE24F72484109E /* Release */ = {
+		283D681458F8BD0ED4AAB616DDF4A51B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0DD668D79575F9CE8C48A7612C840D9 /* Pods-GBViewCollectionKitExample.release.xcconfig */;
+			baseConfigurationReference = 7D6C5B7A4D8D070B219CC1DDCB286DEE /* GBViewCollectionKit.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitExample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GBViewCollectionKit";
+				IBSC_MODULE = GBViewCollectionKit;
+				INFOPLIST_FILE = "Target Support Files/GBViewCollectionKit/ResourceBundle-GBViewCollectionKitResources-GBViewCollectionKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = GBViewCollectionKitResources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		5EC9FE208D668EA7FB61A1C14E127C17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96A83FC42C8361FD8F23909DF6D1AFD0 /* Pods-GBViewCollectionKitTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GBViewCollectionKitTests/Pods-GBViewCollectionKitTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7324B531FB4CF8CE69344CEFCC97B513 /* Debug */ = {
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -632,14 +641,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -660,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -668,48 +676,18 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		B1A15CE1444364292F27A116002EC4A5 /* Debug */ = {
+		2C262C2277170003AD2C087E9C311A1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A913FE405DEC000B92712BDF99CBCFC /* GBViewCollectionKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GBViewCollectionKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit.modulemap";
-				PRODUCT_MODULE_NAME = GBViewCollectionKit;
-				PRODUCT_NAME = GBViewCollectionKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BC7B57A2EF09868404D26B6DD297A5C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498E5AC061CE7781D2E9C696E3FD9FAD /* Pods-GBViewCollectionKitTests.debug.xcconfig */;
+			baseConfigurationReference = A238FEF35ACFB7B73F11B47DA06F33BA /* Pods-GBViewCollectionKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -718,9 +696,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitTests/Pods-GBViewCollectionKitTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GBViewCollectionKitTests/Pods-GBViewCollectionKitTests.modulemap";
@@ -732,17 +710,19 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		E0975662DDD81233D270F6EE303896DA /* Debug */ = {
+		424458FCCDA993C7F3AE34D36CB8A198 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7523B28BFCA577162C3B25D1166EF55C /* Pods-GBViewCollectionKitExample.debug.xcconfig */;
+			baseConfigurationReference = 42D6B7AA12A0A847FA89874CA5799153 /* Pods-GBViewCollectionKitExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -751,9 +731,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitExample/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample.modulemap";
@@ -770,10 +750,11 @@
 			};
 			name = Debug;
 		};
-		FB50AD25006B4C123941405F631AD2A4 /* Release */ = {
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -796,14 +777,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -821,57 +801,184 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
+		8B5CF3BCCB7E9A7A4FE81BAD0EF48520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84F88E4ED794DDE456D26907623C0509 /* Pods-GBViewCollectionKitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitTests/Pods-GBViewCollectionKitTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GBViewCollectionKitTests/Pods-GBViewCollectionKitTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		942593EE0955E0AF02FB6D6687593F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11B185E8497DA7EDB15DE29AD8897EC /* Pods-GBViewCollectionKitExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B30872525AD63781C6DCAF2362A16C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2F89206831C27C5F2B79F4AC4ABFB0 /* GBViewCollectionKit.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GBViewCollectionKit";
+				IBSC_MODULE = GBViewCollectionKit;
+				INFOPLIST_FILE = "Target Support Files/GBViewCollectionKit/ResourceBundle-GBViewCollectionKitResources-GBViewCollectionKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = GBViewCollectionKitResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BA426C821DCC85E07B251140ED327C85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2F89206831C27C5F2B79F4AC4ABFB0 /* GBViewCollectionKit.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GBViewCollectionKit/GBViewCollectionKit.modulemap";
+				PRODUCT_MODULE_NAME = GBViewCollectionKit;
+				PRODUCT_NAME = GBViewCollectionKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19FF8DC7CFA3C040774AEC4BCC4EB295 /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitTests" */ = {
+		15D9FA75D31A52CAB9255EC7376F2C0B /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC7B57A2EF09868404D26B6DD297A5C9 /* Debug */,
-				5EC9FE208D668EA7FB61A1C14E127C17 /* Release */,
+				8B5CF3BCCB7E9A7A4FE81BAD0EF48520 /* Debug */,
+				2C262C2277170003AD2C087E9C311A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		213CC68262D7B772CCA33FFF410A7D52 /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7324B531FB4CF8CE69344CEFCC97B513 /* Debug */,
-				FB50AD25006B4C123941405F631AD2A4 /* Release */,
+				424458FCCDA993C7F3AE34D36CB8A198 /* Debug */,
+				942593EE0955E0AF02FB6D6687593F9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F6998ED0A36FB63B9491EC65A8C2B79 /* Build configuration list for PBXNativeTarget "Pods-GBViewCollectionKitExample" */ = {
+		3A5CEE543BD65B23B6DA5A8C47693692 /* Build configuration list for PBXNativeTarget "GBViewCollectionKit-GBViewCollectionKitResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0975662DDD81233D270F6EE303896DA /* Debug */,
-				28F7761D90E343486ABE24F72484109E /* Release */,
+				9B30872525AD63781C6DCAF2362A16C3 /* Debug */,
+				283D681458F8BD0ED4AAB616DDF4A51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8FAF9511065A95B764F92A3B14B3E80 /* Build configuration list for PBXNativeTarget "GBViewCollectionKit" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1A15CE1444364292F27A116002EC4A5 /* Debug */,
-				243B54421B97715AD37985E9B4D961A5 /* Release */,
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A90AAAFB1A47144AA5B4C076A7B75F3 /* Build configuration list for PBXNativeTarget "GBViewCollectionKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA426C821DCC85E07B251140ED327C85 /* Debug */,
+				18A3E1C9D595C0401402CBE8B4ED76DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

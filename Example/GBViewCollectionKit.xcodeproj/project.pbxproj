@@ -305,21 +305,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GBViewCollectionKit/GBViewCollectionKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GBViewCollectionKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBViewCollectionKitExample/Pods-GBViewCollectionKitExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		87960BF522CFA06D5AFC53CD /* [CP] Check Pods Manifest.lock */ = {

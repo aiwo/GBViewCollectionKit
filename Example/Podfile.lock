@@ -1,5 +1,5 @@
 PODS:
-  - GBViewCollectionKit (0.1.2)
+  - GBViewCollectionKit (0.2.12)
 
 DEPENDENCIES:
   - GBViewCollectionKit (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GBViewCollectionKit: 096e41c8c3d67fcac63b1ca3989c7d529ecb04dc
+  GBViewCollectionKit: 9089c388a48f9866234f519fc87bc3572a32322d
 
-PODFILE CHECKSUM: d7e5e404a5ded741b991a2efe46fe2a9c56a00ba
+PODFILE CHECKSUM: 9a0d43cc44e2ece1945dec6812516a7cf15f923c
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.10.2
