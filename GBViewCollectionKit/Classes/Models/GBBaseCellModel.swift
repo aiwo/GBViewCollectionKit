@@ -63,12 +63,12 @@ open class GBBaseCellModel: NSObject {
         referenceView.setNeedsUpdateConstraints()
         referenceView.updateConstraints()
         
-        referenceView.frame = CGRect(x: 0, y: 0, width: width, height: UILayoutFittingExpandedSize.height)
+        referenceView.frame = CGRect(x: 0, y: 0, width: width, height: UIView.layoutFittingExpandedSize.height)
         
         referenceView.setNeedsLayout()
         referenceView.layoutIfNeeded()
         
-        let height = referenceView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        let height = referenceView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         
         return height
     }

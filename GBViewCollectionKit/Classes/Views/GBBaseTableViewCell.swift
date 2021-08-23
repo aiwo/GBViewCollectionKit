@@ -17,7 +17,7 @@ open class GBBaseTableViewCell: UITableViewCell, GBCollectionViewCell {
     open var isValid: Bool = true
     open var isEnabled: Bool = true
     
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.setupDefaults()
     }

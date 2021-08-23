@@ -13,7 +13,7 @@ open class GBLoadingViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
 
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityIndicatorView = UIActivityIndicatorView(style: .gray)
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(activityIndicatorView)
         

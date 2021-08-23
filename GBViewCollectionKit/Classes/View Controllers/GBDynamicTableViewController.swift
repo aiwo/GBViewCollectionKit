@@ -16,7 +16,7 @@ open class GBDynamicTableViewController: UITableViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
     }
     
@@ -164,7 +164,7 @@ extension GBDynamicTableViewController {
     
     open override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let height = heightDictionary[indexPath.row] else {
-            return UITableViewAutomaticDimension
+            return UITableView.automaticDimension
         }
         return height
     }

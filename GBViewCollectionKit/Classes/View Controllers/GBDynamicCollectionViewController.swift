@@ -112,7 +112,7 @@ extension GBDynamicCollectionViewController {
         
         let reuseIdentifier = String(describing: viewClass)
         let nib = UINib(nibName: reuseIdentifier, bundle: Bundle(for: viewClass))
-        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
+        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
         
         self.registeredClasses.append(viewClass)
     }
@@ -159,7 +159,7 @@ extension GBDynamicCollectionViewController {
         self.registerNib(forHeaderFooterViewClass: headerModel.viewClass as! AnyClass, collectionView: collectionView)
         
         let reuseIdentifier = String(describing: headerModel.viewClass)
-        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: reuseIdentifier, for: indexPath) as! GBBaseCollectionViewHeaderFooterView
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier, for: indexPath) as! GBBaseCollectionViewHeaderFooterView
         headerModel.configure(view)
         
         return view
